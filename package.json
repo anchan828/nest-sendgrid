@@ -1,0 +1,36 @@
+{
+  "name": "@anchan828/nest-sendgrid",
+  "version": "0.0.1",
+  "description": "SendGrid module for Nest framework (node.js)",
+  "author": "anchsn828",
+  "license": "MIT",
+  "scripts": {
+    "prepublish": "tsc",
+    "watch": "tsc --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@nestjs/common": "^5.4.1",
+    "@nestjs/core": "^5.4.1",
+    "@sendgrid/mail": "^6.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^10.12.12",
+    "tslint": "5.11.0",
+    "typescript": "^3.2.1"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "ts"
+    ],
+    "rootDir": "src",
+    "testRegex": ".spec.ts$",
+    "transform": {
+      "^.+\\.(t|j)s$": "ts-jest"
+    },
+    "coverageDirectory": "../coverage",
+    "testEnvironment": "node"
+  }
+}
