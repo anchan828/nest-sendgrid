@@ -5,7 +5,7 @@
   "author": "anchsn828",
   "license": "MIT",
   "scripts": {
-    "prepublish": "tsc",
+    "prepublishOnly": "rm -rf dist && tsc",
     "watch": "tsc --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
