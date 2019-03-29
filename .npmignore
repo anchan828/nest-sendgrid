@@ -1,6 +1,2 @@
-node_modules
-.gitignore
-tsconfig.json
-tslint.json
-.idea
-src
+*
+!dist/**/*
