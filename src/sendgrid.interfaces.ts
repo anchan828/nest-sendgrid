@@ -12,12 +12,12 @@ export type SendGridModuleAsyncOptions = {
    * The factory which should be used to provide the SendGrid options
    */
   useFactory?: (
-    ...args: unknown[]
+    ...args: any[]
   ) => Promise<SendGridModuleOptions> | SendGridModuleOptions;
   /**
    * The providers which should get injected
    */
-  inject?: unknown[];
+  inject?: any[];
 } & Pick<ModuleMetadata, 'imports'>;
 
 export interface SendGridModuleOptionsFactory {
