@@ -1,5 +1,5 @@
 {
-  "name": "@anchan828/nest-sendgrid",
+  "name": "@anchan828/nest-sendgrid-packages",
   "version": "0.1.2",
   "description": "SendGrid module for Nest framework (node.js)",
   "author": "anchan828 <anchan828@gmail.com>",
@@ -7,30 +7,21 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "prepublish": "rm -rf dist && npm run build",
-    "build": "tsc -p tsconfig.build.json",
-    "watch": "tsc --watch",
-    "test": "jest --coverage",
-    "test:watch": "npm run test -- --watch"
-  },
-  "dependencies": {
-    "@sendgrid/mail": "^6.3.1",
-    "reflect-metadata": "^0.1.13"
+    "bootstrap": "lerna bootstrap",
+    "build": "lerna run build",
+    "test": "lerna run test",
+    "publish": "lerna publish --yes patch",
+    "publish:minor": "lerna publish --yes minor",
+    "publish:major": "lerna publish --yes major"
   },
   "devDependencies": {
-    "@nestjs/common": "6.1.0",
-    "@nestjs/core": "6.1.0",
-    "@nestjs/testing": "6.1.0",
-    "@types/jest": "24.0.11",
     "@types/node": "11.13.2",
     "husky": "1.3.1",
-    "jest": "24.7.1",
     "lint-staged": "8.1.5",
     "prettier": "1.16.4",
-    "ts-jest": "24.0.2",
     "tslint": "5.15.0",
     "tslint-config-prettier": "1.18.0",
-    "typescript": "3.4.3"
+    "typescript": "3.4.2"
   },
   "repository": {
     "type": "git",
@@ -40,10 +31,16 @@
     "url": "https://github.com/anchan828/nest-sendgrid/issues"
   },
   "homepage": "https://github.com/anchan828/nest-sendgrid#readme",
+  "hooks": {
+    "pre-commit": "lint-staged"
+  },
   "lint-staged": {
     "*.ts": [
       "prettier --write",
       "git add"
     ]
+  },
+  "dependencies": {
+    "lerna": "^3.13.2"
   }
 }
