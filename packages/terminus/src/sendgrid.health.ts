@@ -26,7 +26,9 @@ export class SendGridHealthIndicator extends HealthIndicator {
     if (!v3Status) {
       throw new HealthCheckError(
         'SendGridHealthCheck failed',
-        `${COMPONENT_NAME} component is not found. please access to http://status.sendgrid.com`,
+        this.getStatus('sendgrid', false, {
+          error: `${COMPONENT_NAME} component is not found. please access to http://status.sendgrid.com`,
+        }),
       );
     }
 

@@ -58,7 +58,9 @@ describe('SendGridHealthIndicator', () => {
         .useValue(httpMock)
         .compile();
       service = app.get<SendGridHealthIndicator>(SendGridHealthIndicator);
-      await expect(service.isHealthy()).rejects.toThrowError();
+      await expect(service.isHealthy()).rejects.toThrowError(
+        'SendGridHealthCheck failed',
+      );
     });
 
     it('should return status down when status is outage', async () => {
