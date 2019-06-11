@@ -21,7 +21,7 @@
     "@nestjs/terminus": "6.3.1",
     "@nestjs/testing": "6.2.4",
     "@types/jest": "24.0.13",
-    "@types/node": "11.13.13",
+    "@types/node": "11.13.14",
     "jest": "24.8.0",
     "prettier": "1.18.2",
     "ts-jest": "24.0.2",
