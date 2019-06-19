@@ -41,7 +41,7 @@ export class SendGridService {
   }
 
   public async send(
-    data: Partial<MailData | MailData[]>,
+    data: Partial<MailData> | Array<Partial<MailData>>,
     isMultiple?: boolean,
     cb?: (err: Error | ResponseError, result: [ClientResponse, {}]) => void,
   ): Promise<[ClientResponse, {}]> {
@@ -57,7 +57,7 @@ export class SendGridService {
   }
 
   private mergeWithDefaultMailData(
-    data: Partial<MailData | MailData[]>,
+    data: Partial<MailData> | Array<Partial<MailData>>,
   ): MailData | MailData[] {
     if (!this.options.defaultMailData) {
       return data as MailData | MailData[];
