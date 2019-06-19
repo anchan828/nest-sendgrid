@@ -1,8 +1,13 @@
 import { Type } from '@nestjs/common';
 import { ModuleMetadata } from '@nestjs/common/interfaces';
+import { MailData } from '@sendgrid/helpers/classes/mail';
 
 export interface SendGridModuleOptions {
   apikey: string;
+  /**
+   * You can set default data
+   */
+  defaultMailData?: MailData;
   substitutionWrappers?: { left: string; right: string };
 }
 

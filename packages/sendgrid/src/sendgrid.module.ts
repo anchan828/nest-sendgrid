@@ -1,4 +1,4 @@
-import { DynamicModule, Module, Provider } from '@nestjs/common';
+import { DynamicModule, Global, Module, Provider } from '@nestjs/common';
 import { ClassProvider } from '@nestjs/common/interfaces';
 import { SendGridConstants } from './sendgrid.constants';
 import {
@@ -8,6 +8,7 @@ import {
 } from './sendgrid.interfaces';
 import { SendGridService } from './sendgrid.service';
 
+@Global()
 @Module({
   providers: [SendGridService],
   exports: [SendGridService],

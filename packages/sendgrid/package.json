@@ -15,13 +15,15 @@
     "test:watch": "npm run test -- --watch"
   },
   "dependencies": {
-    "@sendgrid/mail": "^6.3.1",
-    "reflect-metadata": "^0.1.13"
+    "@sendgrid/mail": "6.3.1",
+    "deepmerge": "3.2.1",
+    "reflect-metadata": "0.1.13"
   },
   "devDependencies": {
     "@nestjs/common": "6.2.4",
     "@nestjs/core": "6.2.4",
     "@nestjs/testing": "6.2.4",
+    "@types/deepmerge": "2.2.0",
     "@types/jest": "24.0.15",
     "@types/node": "11.13.14",
     "jest": "24.8.0",
