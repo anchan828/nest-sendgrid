@@ -8,6 +8,7 @@ import {
   setApiKey,
   setSubstitutionWrappers,
 } from '@sendgrid/mail';
+import * as deepmerge from 'deepmerge';
 import { SendGridConstants } from './sendgrid.constants';
 import { SendGridModuleOptions } from './sendgrid.interfaces';
 import { logger } from './sendgrid.logger';
@@ -42,18 +43,34 @@ export class SendGridService {
   }
 
   public async send(
-    data: MailData | MailData[],
+    data: Partial<MailData | MailData[]>,
     isMultiple?: boolean,
     cb?: (err: Error | ResponseError, result: [ClientResponse, {}]) => void,
   ): Promise<[ClientResponse, {}]> {
     // @ts-ignore
-    return send(data, isMultiple, cb);
+    return send(this.mergeWithDefaultMailData(data), isMultiple, cb);
   }
 
   public async sendMultiple(
-    data: MailData,
+    data: Partial<MailData>,
     cb?: (error: Error | ResponseError, result: [ClientResponse, {}]) => void,
   ): Promise<[ClientResponse, {}]> {
-    return sendMultiple(data, cb);
+    return sendMultiple(this.mergeWithDefaultMailData(data) as MailData, cb);
+  }
+
+  private mergeWithDefaultMailData(
+    data: Partial<MailData | MailData[]>,
+  ): MailData | MailData[] {
+    if (!this.options.defaultMailData) {
+      return data as MailData | MailData[];
+    }
+
+    if (Array.isArray(data)) {
+      return data
+        .filter(mail => mail)
+        .map(mail => deepmerge(this.options.defaultMailData!, mail!));
+    }
+
+    return deepmerge(this.options.defaultMailData, data);
   }
 }
