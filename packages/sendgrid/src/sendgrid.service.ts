@@ -24,10 +24,8 @@ export class SendGridService {
       return;
     }
 
-    if (options.apikey) {
-      setApiKey(options.apikey);
-      logger.log('Set API Key');
-    }
+    setApiKey(options.apikey);
+    logger.log('Set API Key');
 
     if (
       options.substitutionWrappers &&
