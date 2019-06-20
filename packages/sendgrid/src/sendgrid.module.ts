@@ -1,5 +1,5 @@
-import { DynamicModule, Module, Provider } from '@nestjs/common';
-import { ClassProvider } from '@nestjs/common/interfaces';
+import { DynamicModule, Global, Module, Provider } from '@nestjs/common';
+import { ClassProvider, FactoryProvider } from '@nestjs/common/interfaces';
 import { SendGridConstants } from './sendgrid.constants';
 import {
   SendGridModuleAsyncOptions,
@@ -8,6 +8,7 @@ import {
 } from './sendgrid.interfaces';
 import { SendGridService } from './sendgrid.service';
 
+@Global()
 @Module({
   providers: [SendGridService],
   exports: [SendGridService],
@@ -57,7 +58,7 @@ export class SendGridModule {
 
   private static createAsyncOptionsProvider(
     options: SendGridModuleAsyncOptions,
-  ): Provider {
+  ): FactoryProvider {
     if (options.useFactory) {
       return {
         provide: SendGridConstants.SENDGRID_MODULE_OPTIONS,
@@ -69,7 +70,7 @@ export class SendGridModule {
       provide: SendGridConstants.SENDGRID_MODULE_OPTIONS,
       useFactory: async (optionsFactory: SendGridModuleOptionsFactory) =>
         await optionsFactory.createSendGridModuleOptions(),
-      inject: [options.useClass],
+      inject: options.useClass ? [options.useClass] : [],
     };
   }
 }
