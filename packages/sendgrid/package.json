@@ -15,7 +15,7 @@
     "test:watch": "npm run test -- --watch"
   },
   "dependencies": {
-    "@sendgrid/mail": "6.3.1",
+    "@sendgrid/mail": "6.4.0",
     "deepmerge": "3.2.1",
     "reflect-metadata": "0.1.13"
   },
