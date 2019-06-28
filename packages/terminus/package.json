@@ -18,7 +18,7 @@
     "@godaddy/terminus": "4.1.2",
     "@nestjs/common": "6.3.2",
     "@nestjs/core": "6.3.2",
-    "@nestjs/terminus": "6.3.3",
+    "@nestjs/terminus": "6.3.4",
     "@nestjs/testing": "6.3.2",
     "@types/jest": "24.0.15",
     "@types/node": "11.13.15",
