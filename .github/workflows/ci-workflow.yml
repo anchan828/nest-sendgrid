@@ -9,8 +9,6 @@ jobs:
       - uses: actions/checkout@master
         with:
           fetch-depth: 1
-      - name: Create mysql database
-        run: mysql -uroot -proot -e "CREATE DATABASE IF NOT EXISTS test"
       - name: Install npm packages
         run: npm i
       - name: Setup cc-test-reporter
