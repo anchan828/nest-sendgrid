@@ -1,10 +1,10 @@
-import { HttpModule, HttpService } from '@nestjs/common';
-import { Test } from '@nestjs/testing';
-import { Observable, of } from 'rxjs';
-import { COMPONENT_NAME } from './constants';
-import { SendGridHealthIndicator } from './sendgrid.health';
-describe('SendGridHealthIndicator', () => {
-  it('should need HttpModule', async () => {
+import { HttpModule, HttpService } from "@nestjs/common";
+import { Test, TestingModuleBuilder } from "@nestjs/testing";
+import { Observable, of } from "rxjs";
+import { COMPONENT_NAME } from "./constants";
+import { SendGridHealthIndicator } from "./sendgrid.health";
+describe("SendGridHealthIndicator", () => {
+  it("should need HttpModule", async () => {
     await expect(
       Test.createTestingModule({
         providers: [SendGridHealthIndicator],
@@ -13,35 +13,34 @@ describe('SendGridHealthIndicator', () => {
       `Nest can't resolve dependencies of the SendGridHealthIndicator (?). Please make sure that the argument at index [0] is available in the _RootTestModule context.`,
     );
   });
-
-  it('should compile SendGridHealthIndicator', async () => {
-    await expect(
-      Test.createTestingModule({
-        imports: [HttpModule],
-        providers: [SendGridHealthIndicator],
-      }).compile(),
-    ).resolves.toBeDefined();
+  let testingModuleBuilder: TestingModuleBuilder;
+  beforeEach(() => {
+    testingModuleBuilder = Test.createTestingModule({
+      imports: [HttpModule],
+      providers: [SendGridHealthIndicator],
+    });
   });
 
-  describe('is', () => {
+  it("should compile SendGridHealthIndicator", async () => {
+    await expect(testingModuleBuilder.compile()).resolves.toBeDefined();
+  });
+
+  describe("isHealthy", () => {
     let service: SendGridHealthIndicator;
     beforeEach(async () => {
-      const app = await Test.createTestingModule({
-        imports: [HttpModule],
-        providers: [SendGridHealthIndicator],
-      }).compile();
+      const app = await testingModuleBuilder.compile();
       service = app.get<SendGridHealthIndicator>(SendGridHealthIndicator);
     });
-    it('should return status up', async () => {
+    it("should return status up", async () => {
       await expect(service.isHealthy()).resolves.toEqual({
         sendgrid: {
-          apiStatus: 'operational',
-          status: 'up',
+          apiStatus: "operational",
+          status: "up",
         },
       });
     });
 
-    it('should throw error when component is not found', async () => {
+    it("should throw error when component is not found", async () => {
       const httpMock = {
         get: (): Observable<any> =>
           of({
@@ -50,20 +49,15 @@ describe('SendGridHealthIndicator', () => {
             },
           }),
       };
-      const app = await Test.createTestingModule({
-        imports: [HttpModule],
-        providers: [SendGridHealthIndicator],
-      })
+      const app = await testingModuleBuilder
         .overrideProvider(HttpService)
         .useValue(httpMock)
         .compile();
       service = app.get<SendGridHealthIndicator>(SendGridHealthIndicator);
-      await expect(service.isHealthy()).rejects.toThrowError(
-        'SendGridHealthCheck failed',
-      );
+      await expect(service.isHealthy()).rejects.toThrowError("SendGridHealthCheck failed");
     });
 
-    it('should return status down when status is outage', async () => {
+    it("should return status down when status is outage", async () => {
       const httpMock = {
         get: (): Observable<any> =>
           of({
@@ -71,22 +65,19 @@ describe('SendGridHealthIndicator', () => {
               components: [
                 {
                   name: COMPONENT_NAME,
-                  status: 'Major outage',
+                  status: "Major outage",
                 },
               ],
             },
           }),
       };
-      const app = await Test.createTestingModule({
-        imports: [HttpModule],
-        providers: [SendGridHealthIndicator],
-      })
+      const app = await testingModuleBuilder
         .overrideProvider(HttpService)
         .useValue(httpMock)
         .compile();
       service = app.get<SendGridHealthIndicator>(SendGridHealthIndicator);
       await expect(service.isHealthy()).resolves.toEqual({
-        sendgrid: { apiStatus: 'Major outage', status: 'down' },
+        sendgrid: { apiStatus: "Major outage", status: "down" },
       });
     });
   });

@@ -4,5 +4,5 @@ module.exports = {
   coverageDirectory: "../coverage",
   coverageReporters: ["text-summary", "json-summary", "lcov", "text", "clover"],
   testEnvironment: "node",
-  verbose: true
+  verbose: true,
 };

@@ -1,6 +1,6 @@
-import { Type } from '@nestjs/common';
-import { ModuleMetadata } from '@nestjs/common/interfaces';
-import { MailData } from '@sendgrid/helpers/classes/mail';
+import { Type } from "@nestjs/common";
+import { ModuleMetadata } from "@nestjs/common/interfaces";
+import { MailData } from "@sendgrid/helpers/classes/mail";
 
 export interface SendGridModuleOptions {
   apikey: string;
@@ -16,17 +16,13 @@ export type SendGridModuleAsyncOptions = {
   /**
    * The factory which should be used to provide the SendGrid options
    */
-  useFactory?: (
-    ...args: any[]
-  ) => Promise<SendGridModuleOptions> | SendGridModuleOptions;
+  useFactory?: (...args: any[]) => Promise<SendGridModuleOptions> | SendGridModuleOptions;
   /**
    * The providers which should get injected
    */
   inject?: any[];
-} & Pick<ModuleMetadata, 'imports'>;
+} & Pick<ModuleMetadata, "imports">;
 
 export interface SendGridModuleOptionsFactory {
-  createSendGridModuleOptions():
-    | Promise<SendGridModuleOptions>
-    | SendGridModuleOptions;
+  createSendGridModuleOptions(): Promise<SendGridModuleOptions> | SendGridModuleOptions;
 }
