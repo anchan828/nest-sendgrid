@@ -5,6 +5,7 @@
       "source.organizeImports": true
     }
   },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "eslint.autoFixOnSave": true,
   "eslint.options": {
     "extensinons": [".js", ".ts"]
