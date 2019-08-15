@@ -3,6 +3,9 @@ plugins:
   eslint:
     enabled: true
     channel: "eslint-5"
+checks:
+  similar-code:
+    enabled: false
 exclude_patterns:
   - "**/coverage/"
   - "**/node_modules/"
