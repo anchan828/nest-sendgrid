@@ -1,5 +1,5 @@
 import { HttpModule, HttpService } from "@nestjs/common";
-import { Test } from "@nestjs/testing";
+import { Test, TestingModuleBuilder } from "@nestjs/testing";
 import { Observable, of } from "rxjs";
 import { COMPONENT_NAME } from "./constants";
 import { SendGridHealthIndicator } from "./sendgrid.health";
@@ -13,23 +13,22 @@ describe("SendGridHealthIndicator", () => {
       `Nest can't resolve dependencies of the SendGridHealthIndicator (?). Please make sure that the argument at index [0] is available in the _RootTestModule context.`,
     );
   });
-
-  it("should compile SendGridHealthIndicator", async () => {
-    await expect(
-      Test.createTestingModule({
-        imports: [HttpModule],
-        providers: [SendGridHealthIndicator],
-      }).compile(),
-    ).resolves.toBeDefined();
+  let testingModuleBuilder: TestingModuleBuilder;
+  beforeEach(() => {
+    testingModuleBuilder = Test.createTestingModule({
+      imports: [HttpModule],
+      providers: [SendGridHealthIndicator],
+    });
   });
 
-  describe("is", () => {
+  it("should compile SendGridHealthIndicator", async () => {
+    await expect(testingModuleBuilder.compile()).resolves.toBeDefined();
+  });
+
+  describe("isHealthy", () => {
     let service: SendGridHealthIndicator;
     beforeEach(async () => {
-      const app = await Test.createTestingModule({
-        imports: [HttpModule],
-        providers: [SendGridHealthIndicator],
-      }).compile();
+      const app = await testingModuleBuilder.compile();
       service = app.get<SendGridHealthIndicator>(SendGridHealthIndicator);
     });
     it("should return status up", async () => {
@@ -50,10 +49,7 @@ describe("SendGridHealthIndicator", () => {
             },
           }),
       };
-      const app = await Test.createTestingModule({
-        imports: [HttpModule],
-        providers: [SendGridHealthIndicator],
-      })
+      const app = await testingModuleBuilder
         .overrideProvider(HttpService)
         .useValue(httpMock)
         .compile();
@@ -75,10 +71,7 @@ describe("SendGridHealthIndicator", () => {
             },
           }),
       };
-      const app = await Test.createTestingModule({
-        imports: [HttpModule],
-        providers: [SendGridHealthIndicator],
-      })
+      const app = await testingModuleBuilder
         .overrideProvider(HttpService)
         .useValue(httpMock)
         .compile();
