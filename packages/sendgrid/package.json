@@ -11,7 +11,7 @@
     "copy:license": "cp ../../LICENSE ./",
     "build": "node ../../node_modules/typescript/bin/tsc -p tsconfig.build.json",
     "lint": "node ../../node_modules/eslint/bin/eslint --ignore-path ../../.eslintignore '**/*.ts'",
-    "lint:fix": "npm run lint --fix",
+    "lint:fix": "npm run lint -- --fix",
     "watch": "node ../../node_modules/typescript/bin/tsc --watch",
     "test": "node ../../node_modules/jest/bin/jest --coverage",
     "test:watch": "npm run test -- --watch"
