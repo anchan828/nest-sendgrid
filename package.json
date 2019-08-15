@@ -44,16 +44,5 @@
   "bugs": {
     "url": "https://github.com/anchan828/nest-sendgrid/issues"
   },
-  "homepage": "https://github.com/anchan828/nest-sendgrid#readme",
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.ts": [
-      "prettier --write",
-      "git add"
-    ]
-  }
+  "homepage": "https://github.com/anchan828/nest-sendgrid#readme"
 }
