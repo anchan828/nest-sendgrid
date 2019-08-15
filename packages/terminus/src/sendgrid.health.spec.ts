@@ -1,10 +1,10 @@
-import { HttpModule, HttpService } from '@nestjs/common';
-import { Test } from '@nestjs/testing';
-import { Observable, of } from 'rxjs';
-import { COMPONENT_NAME } from './constants';
-import { SendGridHealthIndicator } from './sendgrid.health';
-describe('SendGridHealthIndicator', () => {
-  it('should need HttpModule', async () => {
+import { HttpModule, HttpService } from "@nestjs/common";
+import { Test } from "@nestjs/testing";
+import { Observable, of } from "rxjs";
+import { COMPONENT_NAME } from "./constants";
+import { SendGridHealthIndicator } from "./sendgrid.health";
+describe("SendGridHealthIndicator", () => {
+  it("should need HttpModule", async () => {
     await expect(
       Test.createTestingModule({
         providers: [SendGridHealthIndicator],
@@ -14,7 +14,7 @@ describe('SendGridHealthIndicator', () => {
     );
   });
 
-  it('should compile SendGridHealthIndicator', async () => {
+  it("should compile SendGridHealthIndicator", async () => {
     await expect(
       Test.createTestingModule({
         imports: [HttpModule],
@@ -23,7 +23,7 @@ describe('SendGridHealthIndicator', () => {
     ).resolves.toBeDefined();
   });
 
-  describe('is', () => {
+  describe("is", () => {
     let service: SendGridHealthIndicator;
     beforeEach(async () => {
       const app = await Test.createTestingModule({
@@ -32,16 +32,16 @@ describe('SendGridHealthIndicator', () => {
       }).compile();
       service = app.get<SendGridHealthIndicator>(SendGridHealthIndicator);
     });
-    it('should return status up', async () => {
+    it("should return status up", async () => {
       await expect(service.isHealthy()).resolves.toEqual({
         sendgrid: {
-          apiStatus: 'operational',
-          status: 'up',
+          apiStatus: "operational",
+          status: "up",
         },
       });
     });
 
-    it('should throw error when component is not found', async () => {
+    it("should throw error when component is not found", async () => {
       const httpMock = {
         get: (): Observable<any> =>
           of({
@@ -58,12 +58,10 @@ describe('SendGridHealthIndicator', () => {
         .useValue(httpMock)
         .compile();
       service = app.get<SendGridHealthIndicator>(SendGridHealthIndicator);
-      await expect(service.isHealthy()).rejects.toThrowError(
-        'SendGridHealthCheck failed',
-      );
+      await expect(service.isHealthy()).rejects.toThrowError("SendGridHealthCheck failed");
     });
 
-    it('should return status down when status is outage', async () => {
+    it("should return status down when status is outage", async () => {
       const httpMock = {
         get: (): Observable<any> =>
           of({
@@ -71,7 +69,7 @@ describe('SendGridHealthIndicator', () => {
               components: [
                 {
                   name: COMPONENT_NAME,
-                  status: 'Major outage',
+                  status: "Major outage",
                 },
               ],
             },
@@ -86,7 +84,7 @@ describe('SendGridHealthIndicator', () => {
         .compile();
       service = app.get<SendGridHealthIndicator>(SendGridHealthIndicator);
       await expect(service.isHealthy()).resolves.toEqual({
-        sendgrid: { apiStatus: 'Major outage', status: 'down' },
+        sendgrid: { apiStatus: "Major outage", status: "down" },
       });
     });
   });

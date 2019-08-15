@@ -15,10 +15,10 @@ $ npm i --save @anchan828/nest-sendgrid
 ## Quick Start
 
 ```ts
-import { SendGridModule } from '@anchan828/nest-sendgrid';
-import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
+import { SendGridModule } from "@anchan828/nest-sendgrid";
+import { Module } from "@nestjs/common";
+import { AppController } from "./app.controller";
+import { AppService } from "./app.service";
 
 @Module({
   imports: [
@@ -33,14 +33,12 @@ export class AppModule {}
 ```
 
 ```ts
-import { SendGridService } from '@anchan828/nest-sendgrid';
-import { Controller, Post } from '@nestjs/common';
+import { SendGridService } from "@anchan828/nest-sendgrid";
+import { Controller, Post } from "@nestjs/common";
 
 @Controller()
 export class AppController {
-  constructor(
-    private readonly sendGrid: SendGridService,
-  ) {}
+  constructor(private readonly sendGrid: SendGridService) {}
 
   @Post()
   async root(): Promise<void> {
@@ -49,7 +47,7 @@ export class AppController {
       from: "test@example.com",
       subject: "Sending with SendGrid is Fun",
       text: "and easy to do anywhere, even with Node.js",
-      html: "<strong>and easy to do anywhere, even with Node.js</strong>"
+      html: "<strong>and easy to do anywhere, even with Node.js</strong>",
     });
   }
 }

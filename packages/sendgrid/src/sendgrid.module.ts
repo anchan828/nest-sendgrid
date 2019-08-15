@@ -1,12 +1,8 @@
-import { DynamicModule, Global, Module, Provider } from '@nestjs/common';
-import { ClassProvider, FactoryProvider } from '@nestjs/common/interfaces';
-import { SendGridConstants } from './sendgrid.constants';
-import {
-  SendGridModuleAsyncOptions,
-  SendGridModuleOptions,
-  SendGridModuleOptionsFactory,
-} from './sendgrid.interfaces';
-import { SendGridService } from './sendgrid.service';
+import { DynamicModule, Global, Module, Provider } from "@nestjs/common";
+import { ClassProvider, FactoryProvider } from "@nestjs/common/interfaces";
+import { SendGridConstants } from "./sendgrid.constants";
+import { SendGridModuleAsyncOptions, SendGridModuleOptions, SendGridModuleOptionsFactory } from "./sendgrid.interfaces";
+import { SendGridService } from "./sendgrid.service";
 
 @Global()
 @Module({
@@ -16,7 +12,7 @@ import { SendGridService } from './sendgrid.service';
 export class SendGridModule {
   public static forRoot(options: SendGridModuleOptions): DynamicModule {
     if (!(options && options.apikey)) {
-      throw new Error('SendGrid API Key is not defined');
+      throw new Error("SendGrid API Key is not defined");
     }
 
     return {
@@ -29,9 +25,7 @@ export class SendGridModule {
       ],
     };
   }
-  public static forRootAsync(
-    options: SendGridModuleAsyncOptions,
-  ): DynamicModule {
+  public static forRootAsync(options: SendGridModuleAsyncOptions): DynamicModule {
     const asyncProviders = this.createAsyncProviders(options);
     return {
       module: SendGridModule,
@@ -40,9 +34,7 @@ export class SendGridModule {
     };
   }
 
-  private static createAsyncProviders(
-    options: SendGridModuleAsyncOptions,
-  ): Provider[] {
+  private static createAsyncProviders(options: SendGridModuleAsyncOptions): Provider[] {
     if (options.useFactory) {
       return [this.createAsyncOptionsProvider(options)];
     }
@@ -56,9 +48,7 @@ export class SendGridModule {
     ];
   }
 
-  private static createAsyncOptionsProvider(
-    options: SendGridModuleAsyncOptions,
-  ): FactoryProvider {
+  private static createAsyncOptionsProvider(options: SendGridModuleAsyncOptions): FactoryProvider {
     if (options.useFactory) {
       return {
         provide: SendGridConstants.SENDGRID_MODULE_OPTIONS,
@@ -68,7 +58,7 @@ export class SendGridModule {
     }
     return {
       provide: SendGridConstants.SENDGRID_MODULE_OPTIONS,
-      useFactory: async (optionsFactory: SendGridModuleOptionsFactory) =>
+      useFactory: async (optionsFactory: SendGridModuleOptionsFactory): Promise<SendGridModuleOptions> =>
         await optionsFactory.createSendGridModuleOptions(),
       inject: options.useClass ? [options.useClass] : [],
     };

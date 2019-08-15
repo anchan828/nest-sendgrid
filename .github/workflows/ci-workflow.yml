@@ -16,8 +16,10 @@ jobs:
           curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
           chmod +x ./cc-test-reporter
           ./cc-test-reporter before-build
+      - name: Lint
+        run: npm run lint
       - name: Unit test monorepo packages
-        run: | 
+        run: |
           npm test
           npx ts-node scripts/merge-coverage.ts
       - name: Report coverage

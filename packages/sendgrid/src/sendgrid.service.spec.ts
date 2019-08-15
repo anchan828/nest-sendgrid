@@ -1,24 +1,24 @@
-import { Test } from '@nestjs/testing';
-import * as sendgrid from '@sendgrid/mail';
-import { SendGridConstants } from './sendgrid.constants';
-import { SendGridModuleOptions } from './sendgrid.interfaces';
-import { SendGridService } from './sendgrid.service';
-describe('SendGridService', () => {
-  it('should be compile', async () => {
+import { Test } from "@nestjs/testing";
+import * as sendgrid from "@sendgrid/mail";
+import { SendGridConstants } from "./sendgrid.constants";
+import { SendGridModuleOptions } from "./sendgrid.interfaces";
+import { SendGridService } from "./sendgrid.service";
+describe("SendGridService", () => {
+  it("should be compile", async () => {
     await expect(
       Test.createTestingModule({
         providers: [
           SendGridService,
           {
             provide: SendGridConstants.SENDGRID_MODULE_OPTIONS,
-            useValue: { apikey: 'value' } as SendGridModuleOptions,
+            useValue: { apikey: "value" } as SendGridModuleOptions,
           },
         ],
       }).compile(),
     ).resolves.toBeDefined();
   });
 
-  it('should be compile, but print error log', async () => {
+  it("should be compile, but print error log", async () => {
     await expect(
       Test.createTestingModule({
         providers: [
@@ -32,7 +32,7 @@ describe('SendGridService', () => {
     ).resolves.toBeDefined();
   });
 
-  it('should set Substitution Wrappers', async () => {
+  it("should set Substitution Wrappers", async () => {
     await expect(
       Test.createTestingModule({
         providers: [
@@ -40,10 +40,10 @@ describe('SendGridService', () => {
           {
             provide: SendGridConstants.SENDGRID_MODULE_OPTIONS,
             useValue: {
-              apikey: 'value',
+              apikey: "value",
               substitutionWrappers: {
-                left: 'left',
-                right: 'right',
+                left: "left",
+                right: "right",
               },
             } as SendGridModuleOptions,
           },
@@ -52,130 +52,124 @@ describe('SendGridService', () => {
     ).resolves.toBeDefined();
   });
 
-  it('should send email', async () => {
+  it("should send email", async () => {
     const app = await Test.createTestingModule({
       providers: [
         SendGridService,
         {
           provide: SendGridConstants.SENDGRID_MODULE_OPTIONS,
           useValue: {
-            apikey: 'value',
+            apikey: "value",
           } as SendGridModuleOptions,
         },
       ],
     }).compile();
     const service = app.get<SendGridService>(SendGridService);
-    const mock = jest
-      .spyOn(sendgrid, 'send')
-      .mockImplementationOnce(async () => {
-        return [{} as any, {}];
-      });
+    const mock = jest.spyOn(sendgrid, "send").mockImplementationOnce(async () => {
+      return [{} as any, {}];
+    });
     await service.send({
-      to: 'test@example.com',
-      from: 'test@example.com',
-      subject: 'Sending with SendGrid is Fun',
-      text: 'and easy to do anywhere, even with Node.js',
-      html: '<strong>and easy to do anywhere, even with Node.js</strong>',
+      to: "test@example.com",
+      from: "test@example.com",
+      subject: "Sending with SendGrid is Fun",
+      text: "and easy to do anywhere, even with Node.js",
+      html: "<strong>and easy to do anywhere, even with Node.js</strong>",
     });
     expect(mock).toHaveBeenCalled();
   });
 
-  it('should set default data', async () => {
+  it("should set default data", async () => {
     const app = await Test.createTestingModule({
       providers: [
         SendGridService,
         {
           provide: SendGridConstants.SENDGRID_MODULE_OPTIONS,
           useValue: {
-            apikey: 'value',
+            apikey: "value",
             defaultMailData: {
-              from: 'test@example.com',
+              from: "test@example.com",
             },
           } as SendGridModuleOptions,
         },
       ],
     }).compile();
     const service = app.get<SendGridService>(SendGridService);
-    let mock = jest
-      .spyOn(sendgrid, 'send')
-      .mockImplementationOnce(async data => {
-        expect(data).toStrictEqual({
-          to: 'test@example.com',
-          from: 'test@example.com',
-          subject: 'Sending with SendGrid is Fun',
-          text: 'and easy to do anywhere, even with Node.js',
-          html: '<strong>and easy to do anywhere, even with Node.js</strong>',
-        });
-        return [{} as any, {}];
+    let mock = jest.spyOn(sendgrid, "send").mockImplementationOnce(async data => {
+      expect(data).toStrictEqual({
+        to: "test@example.com",
+        from: "test@example.com",
+        subject: "Sending with SendGrid is Fun",
+        text: "and easy to do anywhere, even with Node.js",
+        html: "<strong>and easy to do anywhere, even with Node.js</strong>",
       });
+      return [{} as any, {}];
+    });
     await service.send({
-      to: 'test@example.com',
-      subject: 'Sending with SendGrid is Fun',
-      text: 'and easy to do anywhere, even with Node.js',
-      html: '<strong>and easy to do anywhere, even with Node.js</strong>',
+      to: "test@example.com",
+      subject: "Sending with SendGrid is Fun",
+      text: "and easy to do anywhere, even with Node.js",
+      html: "<strong>and easy to do anywhere, even with Node.js</strong>",
     });
     expect(mock).toHaveBeenCalled();
 
-    mock = jest.spyOn(sendgrid, 'send').mockImplementationOnce(async data => {
+    mock = jest.spyOn(sendgrid, "send").mockImplementationOnce(async data => {
       expect(data).toStrictEqual([
         {
-          to: 'test@example.com',
-          from: 'test@example.com',
-          subject: 'Sending with SendGrid is Fun',
-          text: 'and easy to do anywhere, even with Node.js',
-          html: '<strong>and easy to do anywhere, even with Node.js</strong>',
+          to: "test@example.com",
+          from: "test@example.com",
+          subject: "Sending with SendGrid is Fun",
+          text: "and easy to do anywhere, even with Node.js",
+          html: "<strong>and easy to do anywhere, even with Node.js</strong>",
         },
         {
-          to: 'test@example.com',
-          from: 'test@example.com',
-          subject: 'Sending with SendGrid is Fun',
-          text: 'and easy to do anywhere, even with Node.js',
-          html: '<strong>and easy to do anywhere, even with Node.js</strong>',
+          to: "test@example.com",
+          from: "test@example.com",
+          subject: "Sending with SendGrid is Fun",
+          text: "and easy to do anywhere, even with Node.js",
+          html: "<strong>and easy to do anywhere, even with Node.js</strong>",
         },
       ]);
       return [{} as any, {}];
     });
     await service.send([
       {
-        to: 'test@example.com',
-        subject: 'Sending with SendGrid is Fun',
-        text: 'and easy to do anywhere, even with Node.js',
-        html: '<strong>and easy to do anywhere, even with Node.js</strong>',
+        to: "test@example.com",
+        subject: "Sending with SendGrid is Fun",
+        text: "and easy to do anywhere, even with Node.js",
+        html: "<strong>and easy to do anywhere, even with Node.js</strong>",
       },
       {
-        to: 'test@example.com',
-        subject: 'Sending with SendGrid is Fun',
-        text: 'and easy to do anywhere, even with Node.js',
-        html: '<strong>and easy to do anywhere, even with Node.js</strong>',
+        to: "test@example.com",
+        subject: "Sending with SendGrid is Fun",
+        text: "and easy to do anywhere, even with Node.js",
+        html: "<strong>and easy to do anywhere, even with Node.js</strong>",
       },
     ]);
     expect(mock).toHaveBeenCalled();
   });
 
-  it('should send multiple', async () => {
+  it("should send multiple", async () => {
     const app = await Test.createTestingModule({
       providers: [
         SendGridService,
         {
           provide: SendGridConstants.SENDGRID_MODULE_OPTIONS,
           useValue: {
-            apikey: 'value',
+            apikey: "value",
           } as SendGridModuleOptions,
         },
       ],
     }).compile();
     const service = app.get<SendGridService>(SendGridService);
-    const mock = jest
-      .spyOn(sendgrid, 'sendMultiple')
-      .mockImplementationOnce(async () => {
-        return [{} as any, {}];
-      });
+    const mock = jest.spyOn(sendgrid, "sendMultiple").mockImplementationOnce(async () => {
+      return [{} as any, {}];
+    });
     await service.sendMultiple({
-      to: 'test@example.com',
-      from: 'test@example.com',
-      subject: 'Sending with SendGrid is Fun',
-      text: 'and easy to do anywhere, even with Node.js',
-      html: '<strong>and easy to do anywhere, even with Node.js</strong>',
+      to: "test@example.com",
+      from: "test@example.com",
+      subject: "Sending with SendGrid is Fun",
+      text: "and easy to do anywhere, even with Node.js",
+      html: "<strong>and easy to do anywhere, even with Node.js</strong>",
     });
     expect(mock).toHaveBeenCalled();
   });

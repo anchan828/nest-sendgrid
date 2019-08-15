@@ -1,5 +1,5 @@
-import { HttpModule, Module } from '@nestjs/common';
-import { SendGridHealthIndicator } from './sendgrid.health';
+import { HttpModule, Module } from "@nestjs/common";
+import { SendGridHealthIndicator } from "./sendgrid.health";
 
 @Module({
   imports: [HttpModule],

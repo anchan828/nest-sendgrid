@@ -4,7 +4,6 @@
 
 The terminus of [@sendgrid/mail](https://github.com/sendgrid/sendgrid-nodejs/tree/master/packages/mail) module for [Nest](https://github.com/nestjs/nest).
 
-
 ## Installation
 
 ```bash
@@ -14,21 +13,17 @@ $ npm i --save @anchan828/nest-sendgrid-terminus @nestjs/terminus @godaddy/termi
 ## Quick Start
 
 ```ts
-const getTerminusOptions = (
-  sendgrid: SendGridHealthIndicator,
-): TerminusModuleOptions => ({
+const getTerminusOptions = (sendgrid: SendGridHealthIndicator): TerminusModuleOptions => ({
   endpoints: [
     {
-      url: '/health',
-      healthIndicators: [
-        async () => sendgrid.isHealthy()
-      ],
+      url: "/health",
+      healthIndicators: [async () => sendgrid.isHealthy()],
     },
   ],
 });
 
 @Module({
-  imports:[
+  imports: [
     TerminusModule.forRootAsync({
       imports: [SendGridHealthModule],
       inject: [SendGridHealthIndicator],
@@ -36,7 +31,7 @@ const getTerminusOptions = (
     }),
   ],
 })
-export class HealthModule { }
+export class HealthModule {}
 ```
 
 ## License
