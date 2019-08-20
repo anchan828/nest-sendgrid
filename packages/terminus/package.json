@@ -20,7 +20,7 @@
     "@godaddy/terminus": "4.1.2",
     "@nestjs/common": "6.5.3",
     "@nestjs/core": "6.5.3",
-    "@nestjs/terminus": "6.5.0",
+    "@nestjs/terminus": "6.5.1",
     "@nestjs/testing": "6.5.3"
   },
   "repository": {
