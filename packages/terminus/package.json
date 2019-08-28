@@ -17,7 +17,7 @@
     "test:watch": "npm run test -- --watch"
   },
   "devDependencies": {
-    "@godaddy/terminus": "4.1.2",
+    "@godaddy/terminus": "4.2.0",
     "@nestjs/common": "6.6.2",
     "@nestjs/core": "6.6.2",
     "@nestjs/terminus": "6.5.1",
