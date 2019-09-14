@@ -9,7 +9,7 @@ export class SendGridHealthIndicator extends HealthIndicator {
     super();
   }
 
-  async isHealthy(): Promise<HealthIndicatorResult> {
+  async isHealthy(key = "sendgrid"): Promise<HealthIndicatorResult> {
     const res = await this.http
       .get(STATUS_API, {
         responseType: "json",
@@ -23,7 +23,7 @@ export class SendGridHealthIndicator extends HealthIndicator {
     if (!v3Status) {
       throw new HealthCheckError(
         "SendGridHealthCheck failed",
-        this.getStatus("sendgrid", false, {
+        this.getStatus(key, false, {
           error: `${COMPONENT_NAME} component is not found. please access to http://status.sendgrid.com`,
         }),
       );
@@ -31,7 +31,7 @@ export class SendGridHealthIndicator extends HealthIndicator {
 
     const isOperational = v3Status.status === "operational";
 
-    return this.getStatus("sendgrid", isOperational, {
+    return this.getStatus(key, isOperational, {
       apiStatus: v3Status.status,
     });
   }
