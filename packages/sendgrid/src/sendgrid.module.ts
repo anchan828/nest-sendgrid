@@ -25,6 +25,7 @@ export class SendGridModule {
       ],
     };
   }
+
   public static forRootAsync(options: SendGridModuleAsyncOptions): DynamicModule {
     const asyncProviders = this.createAsyncProviders(options);
     return {
