@@ -22,9 +22,9 @@
     "reflect-metadata": "0.1.13"
   },
   "devDependencies": {
-    "@nestjs/common": "6.6.7",
-    "@nestjs/core": "6.6.7",
-    "@nestjs/testing": "6.6.7",
+    "@nestjs/common": "6.7.0",
+    "@nestjs/core": "6.7.0",
+    "@nestjs/testing": "6.7.0",
     "@types/deepmerge": "2.2.0"
   },
   "repository": {
