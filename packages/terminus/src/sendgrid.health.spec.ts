@@ -9,9 +9,7 @@ describe("SendGridHealthIndicator", () => {
       Test.createTestingModule({
         providers: [SendGridHealthIndicator],
       }).compile(),
-    ).rejects.toThrowError(
-      `Nest can't resolve dependencies of the SendGridHealthIndicator (?). Please make sure that the argument at index [0] is available in the _RootTestModule context.`,
-    );
+    ).rejects.toThrowError(Error);
   });
   let testingModuleBuilder: TestingModuleBuilder;
   beforeEach(() => {
