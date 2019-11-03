@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.21](https://github.com/anchan828/nest-sendgrid/compare/v0.1.20...v0.1.21) (2019-11-03)
+
+### Bug Fixes
+
+- **deps:** update dependency deepmerge to v4.2.2 ([49c0f39](https://github.com/anchan828/nest-sendgrid/commit/49c0f395bc4533e9950df148dbc718787e2eb4c1))
+
 ## [0.1.20](https://github.com/anchan828/nest-sendgrid/compare/v0.1.19...v0.1.20) (2019-10-27)
 
 ### Bug Fixes
