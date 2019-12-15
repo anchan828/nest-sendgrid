@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.1.26 (2019-12-15)
+
+**Note:** Version bump only for package @anchan828/nest-sendgrid-terminus
+
 ## 0.1.25 (2019-12-08)
 
 **Note:** Version bump only for package @anchan828/nest-sendgrid-terminus
