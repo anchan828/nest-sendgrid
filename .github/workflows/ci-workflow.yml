@@ -11,16 +11,12 @@ jobs:
           fetch-depth: 1
       - name: Install npm packages
         run: npm i
-      - name: Setup cc-test-reporter
-        run: |
-          curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
-          chmod +x ./cc-test-reporter
-          ./cc-test-reporter before-build
       - name: Lint
         run: npm run lint
-      - name: Unit test monorepo packages
-        run: |
-          npm test
-          npx ts-node scripts/merge-coverage.ts
-      - name: Report coverage
-        run: ./cc-test-reporter after-build -r ${{ secrets.CC_TEST_REPORTER_ID }} --coverage-input-type lcov
+      - name: Test monorepo packages
+        uses: paambaati/codeclimate-action@v2.3.0
+        env:
+          CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
+        with:
+          coverageCommand: npm test
+          debug: true
