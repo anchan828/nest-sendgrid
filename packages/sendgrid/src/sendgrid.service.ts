@@ -34,7 +34,7 @@ export class SendGridService {
     cb?: (err: Error | ResponseError, result: [ClientResponse, {}]) => void,
   ): Promise<[ClientResponse, {}]> {
     if (Array.isArray(data)) {
-      return send(data.map(d => this.mergeWithDefaultMailData(d)) as MailData[], isMultiple, cb);
+      return send(data.map((d) => this.mergeWithDefaultMailData(d)) as MailData[], isMultiple, cb);
     } else {
       return send(this.mergeWithDefaultMailData(data), isMultiple, cb);
     }
