@@ -1,6 +1,6 @@
 {
   "name": "@anchan828/nest-sendgrid",
-  "version": "0.1.38",
+  "version": "0.1.40",
   "description": "SendGrid module for Nest framework (node.js)",
   "author": "anchan828 <anchan828@gmail.com>",
   "license": "MIT",
@@ -17,14 +17,14 @@
     "test:watch": "npm run test -- --watch"
   },
   "dependencies": {
-    "@sendgrid/mail": "6.5.4",
+    "@sendgrid/mail": "6.5.5",
     "deepmerge": "4.2.2",
     "reflect-metadata": "0.1.13"
   },
   "devDependencies": {
-    "@nestjs/common": "6.11.11",
-    "@nestjs/core": "6.11.11",
-    "@nestjs/testing": "6.11.11",
+    "@nestjs/common": "7.0.5",
+    "@nestjs/core": "7.0.5",
+    "@nestjs/testing": "7.0.5",
     "@types/deepmerge": "2.2.0"
   },
   "repository": {
