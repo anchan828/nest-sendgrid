@@ -1,7 +1,7 @@
 import { Inject, Injectable } from "@nestjs/common";
 import { ClientResponse } from "@sendgrid/client/src/response";
 import { ResponseError } from "@sendgrid/helpers/classes";
-import { MailData } from "@sendgrid/helpers/classes/mail";
+import { MailDataRequired } from "@sendgrid/helpers/classes/mail";
 import { send, sendMultiple, setApiKey, setSubstitutionWrappers } from "@sendgrid/mail";
 import * as deepmerge from "deepmerge";
 import { SendGridConstants } from "./sendgrid.constants";
@@ -29,27 +29,27 @@ export class SendGridService {
   }
 
   public async send(
-    data: Partial<MailData> | Partial<MailData>[],
+    data: Partial<MailDataRequired> | Partial<MailDataRequired>[],
     isMultiple?: boolean,
     cb?: (err: Error | ResponseError, result: [ClientResponse, {}]) => void,
   ): Promise<[ClientResponse, {}]> {
     if (Array.isArray(data)) {
-      return send(data.map((d) => this.mergeWithDefaultMailData(d)) as MailData[], isMultiple, cb);
+      return send(data.map((d) => this.mergeWithDefaultMailData(d)) as MailDataRequired[], isMultiple, cb);
     } else {
       return send(this.mergeWithDefaultMailData(data), isMultiple, cb);
     }
   }
 
   public async sendMultiple(
-    data: Partial<MailData>,
+    data: Partial<MailDataRequired>,
     cb?: (error: Error | ResponseError, result: [ClientResponse, {}]) => void,
   ): Promise<[ClientResponse, {}]> {
-    return sendMultiple(this.mergeWithDefaultMailData(data) as MailData, cb);
+    return sendMultiple(this.mergeWithDefaultMailData(data) as MailDataRequired, cb);
   }
 
-  private mergeWithDefaultMailData(data: Partial<MailData>): MailData {
+  private mergeWithDefaultMailData(data: Partial<MailDataRequired>): MailDataRequired {
     if (!this.options.defaultMailData) {
-      return data as MailData;
+      return data as MailDataRequired;
     }
     return deepmerge(this.options.defaultMailData, data);
   }
