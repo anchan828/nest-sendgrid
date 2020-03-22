@@ -94,7 +94,7 @@ describe("SendGridService", () => {
       ],
     }).compile();
     const service = app.get<SendGridService>(SendGridService);
-    let mock = jest.spyOn(sendgrid, "send").mockImplementationOnce(async data => {
+    let mock = jest.spyOn(sendgrid, "send").mockImplementationOnce(async (data) => {
       expect(data).toStrictEqual({
         to: "test@example.com",
         from: "test@example.com",
@@ -112,7 +112,7 @@ describe("SendGridService", () => {
     });
     expect(mock).toHaveBeenCalled();
 
-    mock = jest.spyOn(sendgrid, "send").mockImplementationOnce(async data => {
+    mock = jest.spyOn(sendgrid, "send").mockImplementationOnce(async (data) => {
       expect(data).toStrictEqual([
         {
           to: "test@example.com",

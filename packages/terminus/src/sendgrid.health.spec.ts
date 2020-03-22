@@ -47,10 +47,7 @@ describe("SendGridHealthIndicator", () => {
             },
           }),
       };
-      const app = await testingModuleBuilder
-        .overrideProvider(HttpService)
-        .useValue(httpMock)
-        .compile();
+      const app = await testingModuleBuilder.overrideProvider(HttpService).useValue(httpMock).compile();
       service = app.get<SendGridHealthIndicator>(SendGridHealthIndicator);
       await expect(service.isHealthy()).rejects.toThrowError("SendGridHealthCheck failed");
     });
@@ -69,10 +66,7 @@ describe("SendGridHealthIndicator", () => {
             },
           }),
       };
-      const app = await testingModuleBuilder
-        .overrideProvider(HttpService)
-        .useValue(httpMock)
-        .compile();
+      const app = await testingModuleBuilder.overrideProvider(HttpService).useValue(httpMock).compile();
       service = app.get<SendGridHealthIndicator>(SendGridHealthIndicator);
       await expect(service.isHealthy()).resolves.toEqual({
         sendgrid: { apiStatus: "Major outage", status: "down" },
