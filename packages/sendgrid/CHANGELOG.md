@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://github.com/anchan828/nest-sendgrid/compare/v0.1.40...v0.2.0) (2020-03-25)
+
+### Bug Fixes
+
+- change MailData to MailDataRequired ([3348d1e](https://github.com/anchan828/nest-sendgrid/commit/3348d1ed58b381a3701d02d7cf04137214714a77))
+- **deps:** update dependency @sendgrid/mail to v6.5.5 ([5b6a480](https://github.com/anchan828/nest-sendgrid/commit/5b6a480963c26c2cdcfc508c2ef96a146df34614))
+- lint ([4d0e070](https://github.com/anchan828/nest-sendgrid/commit/4d0e070c5f6fa350409d5379e43aa07cdd182128))
+
 ## 0.1.40 (2020-03-22)
 
 **Note:** Version bump only for package @anchan828/nest-sendgrid
