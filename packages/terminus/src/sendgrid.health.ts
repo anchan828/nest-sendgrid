@@ -1,6 +1,5 @@
-import { HealthCheckError } from "@godaddy/terminus";
 import { HttpService, Injectable } from "@nestjs/common";
-import { HealthIndicator, HealthIndicatorResult } from "@nestjs/terminus";
+import { HealthCheckError, HealthIndicator, HealthIndicatorResult } from "@nestjs/terminus";
 import { COMPONENT_NAME, STATUS_API } from "./constants";
 
 @Injectable()
