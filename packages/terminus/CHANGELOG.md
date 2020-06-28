@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.3.11 (2020-06-28)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @sendgrid/mail to v7.2.1 ([2afd4ce](https://github.com/anchan828/nest-sendgrid/commit/2afd4ce1dd5014ba2f652bf834cb3283bfbe84fc))
+
+
+
+
+
 ## 0.3.10 (2020-06-21)
 
 **Note:** Version bump only for package @anchan828/nest-sendgrid-terminus
