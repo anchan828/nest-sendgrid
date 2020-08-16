@@ -19,8 +19,8 @@
     "test": "lerna run test && ts-node scripts/merge-coverage.ts"
   },
   "devDependencies": {
-    "@commitlint/cli": "9.1.1",
-    "@commitlint/config-conventional": "9.1.1",
+    "@commitlint/cli": "9.1.2",
+    "@commitlint/config-conventional": "9.1.2",
     "@types/jest": "26.0.10",
     "@types/node": "11.15.20",
     "@typescript-eslint/eslint-plugin": "3.9.0",
