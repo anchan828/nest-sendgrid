@@ -18,10 +18,10 @@
   },
   "devDependencies": {
     "@godaddy/terminus": "4.5.0",
-    "@nestjs/common": "7.6.1",
-    "@nestjs/core": "7.6.1",
+    "@nestjs/common": "7.6.2",
+    "@nestjs/core": "7.6.2",
     "@nestjs/terminus": "7.0.1",
-    "@nestjs/testing": "7.6.1",
+    "@nestjs/testing": "7.6.2",
     "reflect-metadata": "0.1.13"
   },
   "repository": {
