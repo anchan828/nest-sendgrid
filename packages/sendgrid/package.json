@@ -1,6 +1,6 @@
 {
   "name": "@anchan828/nest-sendgrid",
-  "version": "0.3.35",
+  "version": "0.3.36",
   "description": "SendGrid module for Nest framework (node.js)",
   "author": "anchan828 <anchan828@gmail.com>",
   "license": "MIT",
