@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://github.com/anchan828/nest-sendgrid/compare/v0.3.36...v0.4.0) (2020-12-25)
+
+
+### Features
+
+* support @nestjs/terminus v7 ([09a48a5](https://github.com/anchan828/nest-sendgrid/commit/09a48a512faed75e8e61d482aafbfe549ea17223))
+
+
+
+
+
 ## 0.3.36 (2020-12-20)
 
 **Note:** Version bump only for package @anchan828/nest-sendgrid-terminus
