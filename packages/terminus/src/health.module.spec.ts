@@ -1,31 +1,17 @@
-import { Module } from "@nestjs/common";
-import { HealthIndicatorResult, TerminusModule, TerminusModuleOptions } from "@nestjs/terminus";
+import { Controller, Get, Module } from "@nestjs/common";
+import { HealthCheck, HealthCheckService, TerminusModule } from "@nestjs/terminus";
 import { Test } from "@nestjs/testing";
+import * as request from "supertest";
 import { SendGridHealthModule } from "./health.module";
 import { SendGridHealthIndicator } from "./sendgrid.health";
-
 describe("SendGridHealthModule", () => {
   it("should compile module", async () => {
     await expect(Test.createTestingModule({ imports: [SendGridHealthModule] }).compile()).resolves.toBeDefined();
   });
 
   it("should compile health module", async () => {
-    const getTerminusOptions = (sendgrid: SendGridHealthIndicator): TerminusModuleOptions => ({
-      endpoints: [
-        {
-          url: "/health",
-          healthIndicators: [async (): Promise<HealthIndicatorResult> => sendgrid.isHealthy()],
-        },
-      ],
-    });
     @Module({
-      imports: [
-        TerminusModule.forRootAsync({
-          imports: [SendGridHealthModule],
-          inject: [SendGridHealthIndicator],
-          useFactory: (sendgrid: any) => getTerminusOptions(sendgrid),
-        }),
-      ],
+      imports: [TerminusModule],
     })
     class HealthModule {}
 
@@ -38,5 +24,38 @@ describe("SendGridHealthModule", () => {
     }).compile();
 
     expect(app.get<SendGridHealthIndicator>(SendGridHealthIndicator)).toBeDefined();
+  });
+
+  it("should call /health", async () => {
+    @Controller("health")
+    class HealthController {
+      constructor(private health: HealthCheckService, private sendgrid: SendGridHealthIndicator) {}
+
+      @Get()
+      @HealthCheck()
+      readiness() {
+        return this.health.check([async () => this.sendgrid.isHealthy()]);
+      }
+    }
+
+    @Module({
+      controllers: [HealthController],
+      imports: [TerminusModule, SendGridHealthModule],
+    })
+    class HealthModule {}
+
+    const module = await Test.createTestingModule({ imports: [HealthModule] }).compile();
+    const app = await module.createNestApplication().init();
+    await request(app.getHttpServer())
+      .get("/health")
+      .expect(200)
+      .expect({
+        status: "ok",
+        info: { sendgrid: { status: "up", apiStatus: "operational" } },
+        error: {},
+        details: { sendgrid: { status: "up", apiStatus: "operational" } },
+      });
+
+    await app.close();
   });
 });
