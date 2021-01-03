@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.4.1 (2021-01-03)
+
+**Note:** Version bump only for package @anchan828/nest-sendgrid-packages
+
+
+
+
+
 # [0.4.0](https://github.com/anchan828/nest-sendgrid/compare/v0.3.36...v0.4.0) (2020-12-25)
 
 
