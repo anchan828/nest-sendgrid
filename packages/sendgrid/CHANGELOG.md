@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.5.0](https://github.com/anchan828/nest-sendgrid/compare/v0.4.27...v0.5.0) (2021-07-14)
+
+
+### Bug Fixes
+
+* update to nestjs v8 ([b0405db](https://github.com/anchan828/nest-sendgrid/commit/b0405dba9afc310c57e2466967a44a2db75d74b3))
+
+
+
+
+
 ## 0.4.27 (2021-07-11)
 
 **Note:** Version bump only for package @anchan828/nest-sendgrid
