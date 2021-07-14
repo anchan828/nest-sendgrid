@@ -15,9 +15,11 @@ export class SendGridHealthIndicator extends HealthIndicator {
       })
       .toPromise();
 
-    const v3Status = res.data.components
-      .map((component: { name: string; status: string }) => component)
-      .find((component: { name: string; status: string }) => component.name === COMPONENT_NAME);
+    const v3Status = res
+      ? res.data.components
+          .map((component: { name: string; status: string }) => component)
+          .find((component: { name: string; status: string }) => component.name === COMPONENT_NAME)
+      : undefined;
 
     if (!v3Status) {
       throw new HealthCheckError(
