@@ -1,4 +1,4 @@
-import { HttpModule, HttpService } from "@nestjs/common";
+import { HttpModule, HttpService } from "@nestjs/axios";
 import { Test, TestingModuleBuilder } from "@nestjs/testing";
 import { Observable, of } from "rxjs";
 import { COMPONENT_NAME } from "./constants";

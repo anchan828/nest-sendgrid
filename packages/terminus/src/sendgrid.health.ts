@@ -1,4 +1,5 @@
-import { HttpService, Injectable } from "@nestjs/common";
+import { HttpService } from "@nestjs/axios";
+import { Injectable } from "@nestjs/common";
 import { HealthCheckError, HealthIndicator, HealthIndicatorResult } from "@nestjs/terminus";
 import { COMPONENT_NAME, STATUS_API } from "./constants";
 
@@ -15,9 +16,11 @@ export class SendGridHealthIndicator extends HealthIndicator {
       })
       .toPromise();
 
-    const v3Status = res.data.components
-      .map((component: { name: string; status: string }) => component)
-      .find((component: { name: string; status: string }) => component.name === COMPONENT_NAME);
+    const v3Status = res
+      ? res.data.components
+          .map((component: { name: string; status: string }) => component)
+          .find((component: { name: string; status: string }) => component.name === COMPONENT_NAME)
+      : undefined;
 
     if (!v3Status) {
       throw new HealthCheckError(
