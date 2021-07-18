@@ -22,10 +22,11 @@
     "reflect-metadata": "0.1.13"
   },
   "devDependencies": {
-    "@nestjs/common": "8.0.2",
+    "@nestjs/common": "8.0.4",
     "@nestjs/core": "8.0.2",
     "@nestjs/testing": "8.0.2",
-    "@types/deepmerge": "2.2.0"
+    "@types/deepmerge": "2.2.0",
+    "rxjs": "7.2.0"
   },
   "repository": {
     "type": "git",
@@ -34,5 +35,8 @@
   "bugs": {
     "url": "https://github.com/anchan828/nest-sendgrid/issues"
   },
-  "homepage": "https://github.com/anchan828/nest-sendgrid/tree/master/packages/sendgrid#readme"
+  "homepage": "https://github.com/anchan828/nest-sendgrid/tree/master/packages/sendgrid#readme",
+  "peerDependencies": {
+    "@nestjs/common": "^8.0.0"
+  }
 }
