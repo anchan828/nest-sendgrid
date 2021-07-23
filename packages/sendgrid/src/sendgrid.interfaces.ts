@@ -7,7 +7,7 @@ export interface SendGridModuleOptions {
   /**
    * You can set default data
    */
-  defaultMailData?: MailDataRequired;
+  defaultMailData?: Partial<MailDataRequired>;
   substitutionWrappers?: { left: string; right: string };
 }
 
