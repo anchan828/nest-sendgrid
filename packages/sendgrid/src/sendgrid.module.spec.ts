@@ -1,4 +1,5 @@
 import { Test } from "@nestjs/testing";
+import { MailService } from "@sendgrid/mail";
 import { SendGridConstants } from "./sendgrid.constants";
 import { SendGridModuleOptions, SendGridModuleOptionsFactory } from "./sendgrid.interfaces";
 import { SendGridModule } from "./sendgrid.module";
@@ -25,6 +26,7 @@ describe("SendGridModule", () => {
               apikey: "value",
             },
           },
+          MailService,
         ],
       });
     });
@@ -50,6 +52,7 @@ describe("SendGridModule", () => {
             inject: [],
             provide: "SENDGRID_MODULE_OPTIONS",
           },
+          MailService,
         ],
       });
     });
@@ -74,6 +77,7 @@ describe("SendGridModule", () => {
         providers: [
           { provide: "SENDGRID_MODULE_OPTIONS", inject: [TestFactory] },
           { provide: TestFactory, useClass: TestFactory, inject: [[]] },
+          MailService,
         ],
       });
 
