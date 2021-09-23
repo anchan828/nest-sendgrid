@@ -1,5 +1,6 @@
 import { DynamicModule, Global, Module, Provider } from "@nestjs/common";
 import { ClassProvider, FactoryProvider } from "@nestjs/common/interfaces";
+import { MailService } from "@sendgrid/mail";
 import { SendGridConstants } from "./sendgrid.constants";
 import { SendGridModuleAsyncOptions, SendGridModuleOptions, SendGridModuleOptionsFactory } from "./sendgrid.interfaces";
 import { SendGridService } from "./sendgrid.service";
@@ -22,6 +23,7 @@ export class SendGridModule {
           provide: SendGridConstants.SENDGRID_MODULE_OPTIONS,
           useValue: options,
         },
+        MailService,
       ],
     };
   }
@@ -31,7 +33,7 @@ export class SendGridModule {
     return {
       module: SendGridModule,
       imports: [...(options.imports || [])],
-      providers: [...asyncProviders],
+      providers: [...asyncProviders, MailService],
     };
   }
 

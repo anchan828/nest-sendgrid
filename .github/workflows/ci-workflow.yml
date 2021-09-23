@@ -17,6 +17,8 @@ jobs:
         uses: paambaati/codeclimate-action@v2.7.5
         env:
           CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
+          NEST_SENDGRID_API_KEY: ${{ secrets.NEST_SENDGRID_API_KEY }}
+          NEST_SENDGRID_EMAIL: ${{ secrets.NEST_SENDGRID_EMAIL }}
         with:
           coverageCommand: npm test
           debug: true

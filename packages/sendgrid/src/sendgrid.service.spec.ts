@@ -1,5 +1,5 @@
 import { Test } from "@nestjs/testing";
-import * as sendgrid from "@sendgrid/mail";
+import { MailService } from "@sendgrid/mail";
 import { SendGridConstants } from "./sendgrid.constants";
 import { SendGridModuleOptions } from "./sendgrid.interfaces";
 import { SendGridService } from "./sendgrid.service";
@@ -13,6 +13,7 @@ describe("SendGridService", () => {
             provide: SendGridConstants.SENDGRID_MODULE_OPTIONS,
             useValue: { apikey: "value" } as SendGridModuleOptions,
           },
+          MailService,
         ],
       }).compile(),
     ).resolves.toBeDefined();
@@ -27,6 +28,7 @@ describe("SendGridService", () => {
             provide: SendGridConstants.SENDGRID_MODULE_OPTIONS,
             useValue: {} as SendGridModuleOptions,
           },
+          MailService,
         ],
       }).compile(),
     ).resolves.toBeDefined();
@@ -47,6 +49,7 @@ describe("SendGridService", () => {
               },
             } as SendGridModuleOptions,
           },
+          MailService,
         ],
       }).compile(),
     ).resolves.toBeDefined();
@@ -62,9 +65,11 @@ describe("SendGridService", () => {
             apikey: "value",
           } as SendGridModuleOptions,
         },
+        MailService,
       ],
     }).compile();
     const service = app.get<SendGridService>(SendGridService);
+    const sendgrid = app.get(MailService);
     const mock = jest.spyOn(sendgrid, "send").mockImplementationOnce(async () => {
       return [{} as any, {}];
     });
@@ -91,9 +96,11 @@ describe("SendGridService", () => {
             },
           } as SendGridModuleOptions,
         },
+        MailService,
       ],
     }).compile();
     const service = app.get<SendGridService>(SendGridService);
+    const sendgrid = app.get(MailService);
     let mock = jest.spyOn(sendgrid, "send").mockImplementationOnce(async (data) => {
       expect(data).toStrictEqual({
         to: "test@example.com",
@@ -158,9 +165,11 @@ describe("SendGridService", () => {
             apikey: "value",
           } as SendGridModuleOptions,
         },
+        MailService,
       ],
     }).compile();
     const service = app.get<SendGridService>(SendGridService);
+    const sendgrid = app.get(MailService);
     const mock = jest.spyOn(sendgrid, "sendMultiple").mockImplementationOnce(async () => {
       return [{} as any, {}];
     });
