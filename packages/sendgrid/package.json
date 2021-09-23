@@ -1,6 +1,6 @@
 {
   "name": "@anchan828/nest-sendgrid",
-  "version": "0.5.10",
+  "version": "0.5.13",
   "description": "SendGrid module for Nest framework (node.js)",
   "author": "anchan828 <anchan828@gmail.com>",
   "license": "MIT",
@@ -17,7 +17,7 @@
     "test:watch": "npm run test -- --watch"
   },
   "dependencies": {
-    "@sendgrid/mail": "7.4.6",
+    "@sendgrid/mail": "7.4.7",
     "deepmerge": "4.2.2",
     "reflect-metadata": "0.1.13"
   },

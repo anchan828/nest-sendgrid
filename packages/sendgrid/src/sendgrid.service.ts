@@ -1,8 +1,13 @@
 import { Inject, Injectable } from "@nestjs/common";
-import { ClientResponse } from "@sendgrid/client/src/response";
-import { ResponseError } from "@sendgrid/helpers/classes";
-import { MailDataRequired } from "@sendgrid/helpers/classes/mail";
-import { send, sendMultiple, setApiKey, setSubstitutionWrappers } from "@sendgrid/mail";
+import {
+  ClientResponse,
+  MailDataRequired,
+  ResponseError,
+  send,
+  sendMultiple,
+  setApiKey,
+  setSubstitutionWrappers,
+} from "@sendgrid/mail";
 import * as deepmerge from "deepmerge";
 import { SendGridConstants } from "./sendgrid.constants";
 import { SendGridModuleOptions } from "./sendgrid.interfaces";

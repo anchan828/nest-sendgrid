@@ -1,6 +1,6 @@
 import { Type } from "@nestjs/common";
 import { ModuleMetadata } from "@nestjs/common/interfaces";
-import { MailDataRequired } from "@sendgrid/helpers/classes/mail";
+import { MailDataRequired } from "@sendgrid/mail";
 
 export interface SendGridModuleOptions {
   apikey: string;
