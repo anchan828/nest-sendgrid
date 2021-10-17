@@ -7,8 +7,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
         with:
-          fetch-depth: 1
+          node-version: 16
+          cache: npm
       - name: Install npm packages
         run: npm i
       - name: Lint
