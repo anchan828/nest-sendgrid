@@ -2,7 +2,7 @@
   "editor.codeActionsOnSave": ["source.organizeImports", "source.fixAll"],
   "editor.formatOnSave": true,
   "eslint.options": {
-    "extensinons": [".js", ".ts"]
+    "extensions": [".js", ".ts"]
   },
   "eslint.validate": ["javascript", "typescript"],
   "eslint.workingDirectories": [
