@@ -26,7 +26,7 @@
     "@types/supertest": "2.0.11",
     "reflect-metadata": "0.1.13",
     "rxjs": "7.5.2",
-    "supertest": "6.2.0"
+    "supertest": "6.2.1"
   },
   "repository": {
     "type": "git",
