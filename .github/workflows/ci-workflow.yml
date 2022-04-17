@@ -2,6 +2,10 @@ name: CI
 
 on: [push]
 
+env:
+  TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
+  TURBO_TEAM: ${{ secrets.TURBO_TEAM }}
+
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -12,15 +16,10 @@ jobs:
           node-version: 16
           cache: npm
       - name: Install npm packages
-        run: npm i
+        run: npm ci
       - name: Lint
         run: npm run lint
       - name: Test monorepo packages
-        uses: paambaati/codeclimate-action@v3.0.0
-        env:
-          CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
-          NEST_SENDGRID_API_KEY: ${{ secrets.NEST_SENDGRID_API_KEY }}
-          NEST_SENDGRID_EMAIL: ${{ secrets.NEST_SENDGRID_EMAIL }}
-        with:
-          coverageCommand: npm test
-          debug: true
+        run: npm test
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v3
