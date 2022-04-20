@@ -2,19 +2,27 @@
   "name": "@anchan828/nest-sendgrid-terminus",
   "version": "0.5.39",
   "description": "A terminus of @sendgrid/mail module for Nest framework (node.js)",
-  "author": "anchan828 <anchan828@gmail.com>",
+  "homepage": "https://github.com/anchan828/nest-sendgrid/tree/master/packages/terminus#readme",
+  "bugs": {
+    "url": "https://github.com/anchan828/nest-sendgrid/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anchan828/nest-sendgrid.git"
+  },
   "license": "MIT",
+  "author": "anchan828 <anchan828@gmail.com>",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "prepublishOnly": "rm -rf dist && npm run build && rm -f dist/*.tsbuildinfo && npm run copy:license",
-    "copy:license": "cp ../../LICENSE ./",
     "build": "tsc -p tsconfig.build.json",
+    "copy:license": "cp ../../LICENSE ./",
     "lint": "eslint --ignore-path ../../.eslintignore '**/*.ts'",
     "lint:fix": "npm run lint -- --fix",
-    "watch": "tsc --watch",
+    "prepublishOnly": "rm -rf dist && npm run build && rm -f dist/*.tsbuildinfo && npm run copy:license",
     "test": "jest --coverage",
-    "test:watch": "npm run test -- --watch"
+    "test:watch": "npm run test -- --watch",
+    "watch": "tsc --watch"
   },
   "devDependencies": {
     "@nestjs/axios": "0.0.7",
@@ -28,14 +36,6 @@
     "rxjs": "7.5.5",
     "supertest": "6.2.2"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/anchan828/nest-sendgrid.git"
-  },
-  "bugs": {
-    "url": "https://github.com/anchan828/nest-sendgrid/issues"
-  },
-  "homepage": "https://github.com/anchan828/nest-sendgrid/tree/master/packages/terminus#readme",
   "peerDependencies": {
     "@nestjs/common": "^8.0.0"
   }

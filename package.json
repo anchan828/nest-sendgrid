@@ -2,28 +2,37 @@
   "name": "@anchan828/nest-sendgrid-packages",
   "version": "0.1.2",
   "description": "SendGrid module for Nest framework (node.js)",
-  "author": "anchan828 <anchan828@gmail.com>",
+  "homepage": "https://github.com/anchan828/nest-sendgrid#readme",
+  "bugs": {
+    "url": "https://github.com/anchan828/nest-sendgrid/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anchan828/nest-sendgrid.git"
+  },
   "license": "MIT",
+  "author": "anchan828 <anchan828@gmail.com>",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "workspaces": [
     "packages/*"
   ],
   "scripts": {
-    "postinstall": "husky install",
     "bootstrap": "lerna bootstrap",
     "build": "turbo run build",
     "format": "prettier --write '**/*.{js,json,yml,yaml,md}'",
+    "postinstall": "husky install",
     "lint": "turbo run lint",
     "lint:fix": "turbo run lint:fix",
     "publish": "lerna publish --yes patch",
-    "publish:minor": "lerna publish --yes minor",
     "publish:major": "lerna publish --yes major",
+    "publish:minor": "lerna publish --yes minor",
     "test": "turbo run test"
   },
   "devDependencies": {
     "@commitlint/cli": "16.2.3",
     "@commitlint/config-conventional": "16.2.1",
+    "@lerna-lite/cli": "1.0.5",
     "@types/jest": "27.4.1",
     "@types/node": "16.11.27",
     "@typescript-eslint/eslint-plugin": "5.20.0",
@@ -33,20 +42,11 @@
     "eslint-plugin-prettier": "4.0.0",
     "husky": "7.0.4",
     "jest": "27.5.1",
-    "@lerna-lite/cli": "1.0.5",
     "lint-staged": "12.3.8",
     "prettier": "2.6.2",
     "ts-jest": "27.1.4",
     "ts-node": "10.7.0",
     "turbo": "1.2.4",
     "typescript": "4.6.3"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/anchan828/nest-sendgrid.git"
-  },
-  "bugs": {
-    "url": "https://github.com/anchan828/nest-sendgrid/issues"
-  },
-  "homepage": "https://github.com/anchan828/nest-sendgrid#readme"
+  }
 }
