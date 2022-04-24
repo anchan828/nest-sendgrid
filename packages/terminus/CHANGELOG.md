@@ -3,847 +3,432 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-## 0.5.39 (2022-04-17)
+## 0.5.40 (2022-04-24)
 
 **Note:** Version bump only for package @anchan828/nest-sendgrid-terminus
 
+## 0.5.39 (2022-04-17)
 
-
-
+**Note:** Version bump only for package @anchan828/nest-sendgrid-terminus
 
 ## 0.5.38 (2022-04-10)
 
 **Note:** Version bump only for package @anchan828/nest-sendgrid-terminus
 
-
-
-
-
 ## 0.5.37 (2022-04-03)
 
 **Note:** Version bump only for package @anchan828/nest-sendgrid-terminus
-
-
-
-
 
 ## 0.5.36 (2022-03-27)
 
 **Note:** Version bump only for package @anchan828/nest-sendgrid-terminus
 
-
-
-
-
 ## 0.5.35 (2022-03-20)
 
 **Note:** Version bump only for package @anchan828/nest-sendgrid-terminus
-
-
-
-
 
 ## 0.5.34 (2022-03-13)
 
 **Note:** Version bump only for package @anchan828/nest-sendgrid-terminus
 
-
-
-
-
 ## 0.5.33 (2022-03-06)
 
 **Note:** Version bump only for package @anchan828/nest-sendgrid-terminus
-
-
-
-
 
 ## 0.5.32 (2022-02-27)
 
 **Note:** Version bump only for package @anchan828/nest-sendgrid-terminus
 
-
-
-
-
 ## 0.5.31 (2022-02-20)
 
 **Note:** Version bump only for package @anchan828/nest-sendgrid-terminus
-
-
-
-
 
 ## 0.5.30 (2022-02-13)
 
 **Note:** Version bump only for package @anchan828/nest-sendgrid-terminus
 
-
-
-
-
 ## 0.5.29 (2022-02-06)
 
 **Note:** Version bump only for package @anchan828/nest-sendgrid-terminus
-
-
-
-
 
 ## 0.5.28 (2022-01-30)
 
 **Note:** Version bump only for package @anchan828/nest-sendgrid-terminus
 
-
-
-
-
 ## 0.5.27 (2021-12-26)
 
 **Note:** Version bump only for package @anchan828/nest-sendgrid-terminus
-
-
-
-
 
 ## 0.5.26 (2021-12-19)
 
 **Note:** Version bump only for package @anchan828/nest-sendgrid-terminus
 
-
-
-
-
 ## 0.5.25 (2021-12-12)
 
 **Note:** Version bump only for package @anchan828/nest-sendgrid-terminus
-
-
-
-
 
 ## 0.5.24 (2021-12-05)
 
 **Note:** Version bump only for package @anchan828/nest-sendgrid-terminus
 
-
-
-
-
 ## 0.5.23 (2021-11-28)
 
 **Note:** Version bump only for package @anchan828/nest-sendgrid-terminus
-
-
-
-
 
 ## 0.5.22 (2021-11-21)
 
 **Note:** Version bump only for package @anchan828/nest-sendgrid-terminus
 
-
-
-
-
 ## 0.5.21 (2021-11-14)
 
 **Note:** Version bump only for package @anchan828/nest-sendgrid-terminus
-
-
-
-
 
 ## 0.5.20 (2021-11-07)
 
 **Note:** Version bump only for package @anchan828/nest-sendgrid-terminus
 
-
-
-
-
 ## 0.5.19 (2021-10-31)
 
 **Note:** Version bump only for package @anchan828/nest-sendgrid-terminus
-
-
-
-
 
 ## 0.5.18 (2021-10-24)
 
 **Note:** Version bump only for package @anchan828/nest-sendgrid-terminus
 
-
-
-
-
 ## 0.5.17 (2021-10-17)
 
 **Note:** Version bump only for package @anchan828/nest-sendgrid-terminus
-
-
-
-
 
 ## 0.5.16 (2021-10-10)
 
 **Note:** Version bump only for package @anchan828/nest-sendgrid-terminus
 
-
-
-
-
 ## 0.5.15 (2021-10-03)
 
 **Note:** Version bump only for package @anchan828/nest-sendgrid-terminus
-
-
-
-
 
 ## 0.5.14 (2021-09-26)
 
 **Note:** Version bump only for package @anchan828/nest-sendgrid-terminus
 
-
-
-
-
 ## 0.5.13 (2021-09-19)
 
 **Note:** Version bump only for package @anchan828/nest-sendgrid-terminus
-
-
-
-
 
 ## 0.5.12 (2021-09-12)
 
 **Note:** Version bump only for package @anchan828/nest-sendgrid-terminus
 
-
-
-
-
 ## 0.5.11 (2021-09-05)
 
 **Note:** Version bump only for package @anchan828/nest-sendgrid-terminus
-
-
-
-
 
 ## 0.5.10 (2021-08-29)
 
 **Note:** Version bump only for package @anchan828/nest-sendgrid-terminus
 
-
-
-
-
 ## 0.5.9 (2021-08-22)
 
 **Note:** Version bump only for package @anchan828/nest-sendgrid-terminus
-
-
-
-
 
 ## 0.5.8 (2021-08-15)
 
 **Note:** Version bump only for package @anchan828/nest-sendgrid-terminus
 
-
-
-
-
 ## 0.5.7 (2021-08-08)
 
 **Note:** Version bump only for package @anchan828/nest-sendgrid-terminus
-
-
-
-
 
 ## 0.5.6 (2021-08-01)
 
 **Note:** Version bump only for package @anchan828/nest-sendgrid-terminus
 
-
-
-
-
 ## 0.5.5 (2021-07-25)
 
 **Note:** Version bump only for package @anchan828/nest-sendgrid-terminus
-
-
-
-
 
 ## 0.5.4 (2021-07-23)
 
 **Note:** Version bump only for package @anchan828/nest-sendgrid-terminus
 
-
-
-
-
 ## 0.5.3 (2021-07-23)
 
 **Note:** Version bump only for package @anchan828/nest-sendgrid-terminus
-
-
-
-
 
 ## 0.5.2 (2021-07-18)
 
 **Note:** Version bump only for package @anchan828/nest-sendgrid-terminus
 
-
-
-
-
 ## 0.5.1 (2021-07-18)
 
 **Note:** Version bump only for package @anchan828/nest-sendgrid-terminus
 
-
-
-
-
 # [0.5.0](https://github.com/anchan828/nest-sendgrid/compare/v0.4.27...v0.5.0) (2021-07-14)
-
 
 ### Bug Fixes
 
 * toPromise in rxjs will be supported at the next time. ([c8a3d33](https://github.com/anchan828/nest-sendgrid/commit/c8a3d3370276984b3e1ba37208e536744218f7e0))
 * update to nestjs v8 ([b0405db](https://github.com/anchan828/nest-sendgrid/commit/b0405dba9afc310c57e2466967a44a2db75d74b3))
 
-
-
-
-
 ## 0.4.27 (2021-07-11)
 
 **Note:** Version bump only for package @anchan828/nest-sendgrid-terminus
-
-
-
-
 
 ## 0.4.26 (2021-06-27)
 
 **Note:** Version bump only for package @anchan828/nest-sendgrid-terminus
 
-
-
-
-
 ## 0.4.25 (2021-06-20)
 
 **Note:** Version bump only for package @anchan828/nest-sendgrid-terminus
-
-
-
-
 
 ## 0.4.24 (2021-06-13)
 
 **Note:** Version bump only for package @anchan828/nest-sendgrid-terminus
 
-
-
-
-
 ## 0.4.23 (2021-06-06)
 
 **Note:** Version bump only for package @anchan828/nest-sendgrid-terminus
-
-
-
-
 
 ## 0.4.22 (2021-05-30)
 
 **Note:** Version bump only for package @anchan828/nest-sendgrid-terminus
 
-
-
-
-
 ## 0.4.21 (2021-05-23)
 
 **Note:** Version bump only for package @anchan828/nest-sendgrid-terminus
-
-
-
-
 
 ## 0.4.20 (2021-05-16)
 
 **Note:** Version bump only for package @anchan828/nest-sendgrid-terminus
 
-
-
-
-
 ## 0.4.19 (2021-05-09)
 
 **Note:** Version bump only for package @anchan828/nest-sendgrid-terminus
-
-
-
-
 
 ## 0.4.18 (2021-05-02)
 
 **Note:** Version bump only for package @anchan828/nest-sendgrid-terminus
 
-
-
-
-
 ## 0.4.17 (2021-04-25)
 
 **Note:** Version bump only for package @anchan828/nest-sendgrid-terminus
-
-
-
-
 
 ## 0.4.16 (2021-04-18)
 
 **Note:** Version bump only for package @anchan828/nest-sendgrid-terminus
 
-
-
-
-
 ## 0.4.15 (2021-04-11)
 
 **Note:** Version bump only for package @anchan828/nest-sendgrid-terminus
-
-
-
-
 
 ## 0.4.14 (2021-04-04)
 
 **Note:** Version bump only for package @anchan828/nest-sendgrid-terminus
 
-
-
-
-
 ## 0.4.13 (2021-03-28)
 
 **Note:** Version bump only for package @anchan828/nest-sendgrid-terminus
-
-
-
-
 
 ## 0.4.12 (2021-03-21)
 
 **Note:** Version bump only for package @anchan828/nest-sendgrid-terminus
 
-
-
-
-
 ## 0.4.11 (2021-03-14)
 
 **Note:** Version bump only for package @anchan828/nest-sendgrid-terminus
-
-
-
-
 
 ## 0.4.10 (2021-03-07)
 
 **Note:** Version bump only for package @anchan828/nest-sendgrid-terminus
 
-
-
-
-
 ## 0.4.9 (2021-02-28)
 
 **Note:** Version bump only for package @anchan828/nest-sendgrid-terminus
-
-
-
-
 
 ## 0.4.8 (2021-02-21)
 
 **Note:** Version bump only for package @anchan828/nest-sendgrid-terminus
 
-
-
-
-
 ## 0.4.7 (2021-02-14)
 
 **Note:** Version bump only for package @anchan828/nest-sendgrid-terminus
-
-
-
-
 
 ## 0.4.6 (2021-02-07)
 
 **Note:** Version bump only for package @anchan828/nest-sendgrid-terminus
 
-
-
-
-
 ## 0.4.5 (2021-01-31)
 
 **Note:** Version bump only for package @anchan828/nest-sendgrid-terminus
-
-
-
-
 
 ## 0.4.4 (2021-01-24)
 
 **Note:** Version bump only for package @anchan828/nest-sendgrid-terminus
 
-
-
-
-
 ## 0.4.3 (2021-01-17)
 
 **Note:** Version bump only for package @anchan828/nest-sendgrid-terminus
-
-
-
-
 
 ## 0.4.2 (2021-01-10)
 
 **Note:** Version bump only for package @anchan828/nest-sendgrid-terminus
 
-
-
-
-
 ## 0.4.1 (2021-01-03)
 
 **Note:** Version bump only for package @anchan828/nest-sendgrid-terminus
 
-
-
-
-
 # [0.4.0](https://github.com/anchan828/nest-sendgrid/compare/v0.3.36...v0.4.0) (2020-12-25)
-
 
 ### Features
 
 * support @nestjs/terminus v7 ([09a48a5](https://github.com/anchan828/nest-sendgrid/commit/09a48a512faed75e8e61d482aafbfe549ea17223))
 
-
-
-
-
 ## 0.3.36 (2020-12-20)
 
 **Note:** Version bump only for package @anchan828/nest-sendgrid-terminus
-
-
-
-
 
 ## 0.3.35 (2020-12-13)
 
 **Note:** Version bump only for package @anchan828/nest-sendgrid-terminus
 
-
-
-
-
 ## 0.3.34 (2020-12-06)
 
 **Note:** Version bump only for package @anchan828/nest-sendgrid-terminus
-
-
-
-
 
 ## 0.3.33 (2020-11-29)
 
 **Note:** Version bump only for package @anchan828/nest-sendgrid-terminus
 
-
-
-
-
 ## 0.3.32 (2020-11-22)
 
 **Note:** Version bump only for package @anchan828/nest-sendgrid-terminus
-
-
-
-
 
 ## 0.3.31 (2020-11-15)
 
 **Note:** Version bump only for package @anchan828/nest-sendgrid-terminus
 
-
-
-
-
 ## 0.3.30 (2020-11-08)
 
 **Note:** Version bump only for package @anchan828/nest-sendgrid-terminus
-
-
-
-
 
 ## 0.3.29 (2020-11-01)
 
 **Note:** Version bump only for package @anchan828/nest-sendgrid-terminus
 
-
-
-
-
 ## 0.3.28 (2020-10-25)
 
 **Note:** Version bump only for package @anchan828/nest-sendgrid-terminus
-
-
-
-
 
 ## 0.3.27 (2020-10-18)
 
 **Note:** Version bump only for package @anchan828/nest-sendgrid-terminus
 
-
-
-
-
 ## 0.3.26 (2020-10-11)
 
 **Note:** Version bump only for package @anchan828/nest-sendgrid-terminus
-
-
-
-
 
 ## 0.3.25 (2020-10-04)
 
 **Note:** Version bump only for package @anchan828/nest-sendgrid-terminus
 
-
-
-
-
 ## 0.3.24 (2020-09-27)
 
 **Note:** Version bump only for package @anchan828/nest-sendgrid-terminus
-
-
-
-
 
 ## 0.3.23 (2020-09-20)
 
 **Note:** Version bump only for package @anchan828/nest-sendgrid-terminus
 
-
-
-
-
 ## 0.3.22 (2020-09-13)
 
 **Note:** Version bump only for package @anchan828/nest-sendgrid-terminus
-
-
-
-
 
 ## 0.3.21 (2020-09-06)
 
 **Note:** Version bump only for package @anchan828/nest-sendgrid-terminus
 
-
-
-
-
 ## 0.3.20 (2020-08-30)
 
 **Note:** Version bump only for package @anchan828/nest-sendgrid-terminus
-
-
-
-
 
 ## 0.3.19 (2020-08-23)
 
 **Note:** Version bump only for package @anchan828/nest-sendgrid-terminus
 
-
-
-
-
 ## 0.3.18 (2020-08-16)
 
 **Note:** Version bump only for package @anchan828/nest-sendgrid-terminus
-
-
-
-
 
 ## 0.3.17 (2020-08-09)
 
 **Note:** Version bump only for package @anchan828/nest-sendgrid-terminus
 
-
-
-
-
 ## 0.3.16 (2020-08-02)
 
 **Note:** Version bump only for package @anchan828/nest-sendgrid-terminus
-
-
-
-
 
 ## 0.3.15 (2020-07-26)
 
 **Note:** Version bump only for package @anchan828/nest-sendgrid-terminus
 
-
-
-
-
 ## 0.3.14 (2020-07-19)
 
 **Note:** Version bump only for package @anchan828/nest-sendgrid-terminus
-
-
-
-
 
 ## 0.3.13 (2020-07-12)
 
 **Note:** Version bump only for package @anchan828/nest-sendgrid-terminus
 
-
-
-
-
 ## 0.3.12 (2020-07-05)
 
 **Note:** Version bump only for package @anchan828/nest-sendgrid-terminus
 
-
-
-
-
 ## 0.3.11 (2020-06-28)
-
 
 ### Bug Fixes
 
 * **deps:** update dependency @sendgrid/mail to v7.2.1 ([2afd4ce](https://github.com/anchan828/nest-sendgrid/commit/2afd4ce1dd5014ba2f652bf834cb3283bfbe84fc))
 
-
-
-
-
 ## 0.3.10 (2020-06-21)
 
 **Note:** Version bump only for package @anchan828/nest-sendgrid-terminus
-
-
-
-
 
 ## 0.3.9 (2020-06-14)
 
 **Note:** Version bump only for package @anchan828/nest-sendgrid-terminus
 
-
-
-
-
 ## 0.3.8 (2020-06-07)
 
 **Note:** Version bump only for package @anchan828/nest-sendgrid-terminus
-
-
-
-
 
 ## 0.3.7 (2020-05-31)
 
 **Note:** Version bump only for package @anchan828/nest-sendgrid-terminus
 
-
-
-
-
 ## 0.3.6 (2020-05-24)
 
 **Note:** Version bump only for package @anchan828/nest-sendgrid-terminus
-
-
-
-
 
 ## 0.3.5 (2020-05-17)
 
 **Note:** Version bump only for package @anchan828/nest-sendgrid-terminus
 
-
-
-
-
 ## 0.3.4 (2020-05-10)
 
 **Note:** Version bump only for package @anchan828/nest-sendgrid-terminus
-
-
-
-
 
 ## 0.3.3 (2020-05-03)
 
 **Note:** Version bump only for package @anchan828/nest-sendgrid-terminus
 
-
-
-
-
 ## 0.3.2 (2020-04-26)
 
 **Note:** Version bump only for package @anchan828/nest-sendgrid-terminus
 
-
-
-
-
 ## 0.3.1 (2020-04-19)
 
 **Note:** Version bump only for package @anchan828/nest-sendgrid-terminus
-
-
-
-
 
 # [0.3.0](https://github.com/anchan828/nest-sendgrid/compare/v0.2.3...v0.3.0) (2020-04-15)
 
