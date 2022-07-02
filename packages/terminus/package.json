@@ -34,7 +34,7 @@
     "@types/supertest": "2.0.12",
     "reflect-metadata": "0.1.13",
     "rxjs": "7.5.5",
-    "supertest": "6.2.3"
+    "supertest": "6.2.4"
   },
   "peerDependencies": {
     "@nestjs/common": "^8.0.0"
