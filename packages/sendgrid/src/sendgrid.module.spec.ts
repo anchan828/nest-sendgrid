@@ -77,7 +77,7 @@ describe("SendGridModule", () => {
         imports: [],
         providers: [
           { provide: "SENDGRID_MODULE_OPTIONS", inject: [TestFactory] },
-          { provide: TestFactory, useClass: TestFactory, inject: [[]] },
+          { provide: TestFactory, useClass: TestFactory },
           MailService,
         ],
       });
