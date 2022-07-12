@@ -1,5 +1,10 @@
 # @anchan828/nest-sendgrid
 
+## Supported Versions
+
+* NestJS 8: v0.5.x
+* NestJS 9: v0.6.x
+
 ## Description
 
 The [@sendgrid/mail](https://github.com/sendgrid/sendgrid-nodejs/tree/master/packages/mail) module for [Nest](https://github.com/nestjs/nest).
