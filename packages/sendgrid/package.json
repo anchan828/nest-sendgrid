@@ -30,9 +30,9 @@
     "reflect-metadata": "0.1.13"
   },
   "devDependencies": {
-    "@nestjs/common": "9.0.1",
-    "@nestjs/core": "9.0.1",
-    "@nestjs/testing": "9.0.1",
+    "@nestjs/common": "9.0.9",
+    "@nestjs/core": "9.0.9",
+    "@nestjs/testing": "9.0.9",
     "@types/deepmerge": "2.2.0",
     "rxjs": "7.5.6"
   },
