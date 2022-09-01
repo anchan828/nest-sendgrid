@@ -25,16 +25,16 @@
     "watch": "tsc --watch"
   },
   "devDependencies": {
-    "@nestjs/axios": "0.1.0",
-    "@nestjs/common": "9.0.11",
-    "@nestjs/core": "9.0.11",
-    "@nestjs/platform-express": "9.0.11",
-    "@nestjs/terminus": "9.1.1",
-    "@nestjs/testing": "9.0.11",
-    "@types/supertest": "2.0.12",
-    "reflect-metadata": "0.1.13",
-    "rxjs": "7.5.6",
-    "supertest": "6.2.4"
+    "@nestjs/axios": "^0.1.0",
+    "@nestjs/common": "^9.0.11",
+    "@nestjs/core": "^9.0.11",
+    "@nestjs/platform-express": "^9.0.11",
+    "@nestjs/terminus": "^9.1.1",
+    "@nestjs/testing": "^9.0.11",
+    "@types/supertest": "^2.0.12",
+    "reflect-metadata": "^0.1.13",
+    "rxjs": "^7.5.6",
+    "supertest": "^6.2.4"
   },
   "peerDependencies": {
     "@nestjs/common": "^8.0.0 || ^9.0.0"

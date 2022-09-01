@@ -25,16 +25,16 @@
     "watch": "tsc --watch"
   },
   "dependencies": {
-    "@sendgrid/mail": "7.7.0",
-    "deepmerge": "4.2.2",
-    "reflect-metadata": "0.1.13"
+    "@sendgrid/mail": "^7.7.0",
+    "deepmerge": "^4.2.2",
+    "reflect-metadata": "^0.1.13"
   },
   "devDependencies": {
-    "@nestjs/common": "9.0.11",
-    "@nestjs/core": "9.0.11",
-    "@nestjs/testing": "9.0.11",
-    "@types/deepmerge": "2.2.0",
-    "rxjs": "7.5.6"
+    "@nestjs/common": "^9.0.11",
+    "@nestjs/core": "^9.0.11",
+    "@nestjs/testing": "^9.0.11",
+    "@types/deepmerge": "^2.2.0",
+    "rxjs": "^7.5.6"
   },
   "peerDependencies": {
     "@nestjs/common": "^8.0.0 || ^9.0.0"
