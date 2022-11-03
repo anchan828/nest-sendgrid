@@ -25,12 +25,12 @@
     "watch": "tsc --watch"
   },
   "devDependencies": {
-    "@nestjs/axios": "^0.1.0",
-    "@nestjs/common": "^9.1.2",
-    "@nestjs/core": "^9.1.2",
-    "@nestjs/platform-express": "^9.1.2",
+    "@nestjs/axios": "^1.0.0",
+    "@nestjs/common": "^9.1.6",
+    "@nestjs/core": "^9.1.6",
+    "@nestjs/platform-express": "^9.1.6",
     "@nestjs/terminus": "^9.1.2",
-    "@nestjs/testing": "^9.1.2",
+    "@nestjs/testing": "^9.1.6",
     "@types/supertest": "^2.0.12",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.5.7",
