@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.6.36 (2023-03-19)
+
+### Bug Fixes
+
+* **deps:** update dependency deepmerge to ^4.3.1 ([476ad63](https://github.com/anchan828/nest-sendgrid/commit/476ad63133f6ff73ef3312076368d1d45b36db15))
+
 ## 0.6.35 (2023-03-12)
 
 **Note:** Version bump only for package @anchan828/nest-sendgrid-terminus
