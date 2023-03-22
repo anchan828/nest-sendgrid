@@ -29,7 +29,7 @@
     "test": "turbo run test"
   },
   "devDependencies": {
-    "@commitlint/cli": "^17.4.4",
+    "@commitlint/cli": "^17.5.0",
     "@commitlint/config-conventional": "^17.4.4",
     "@lerna-lite/cli": "^1.17.0",
     "@types/jest": "^29.5.0",
