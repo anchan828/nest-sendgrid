@@ -34,7 +34,7 @@
     "@nestjs/core": "^9.3.8",
     "@nestjs/testing": "^9.3.8",
     "@types/deepmerge": "^2.2.0",
-    "rxjs": "^7.8.0"
+    "rxjs": "^7.8.1"
   },
   "peerDependencies": {
     "@nestjs/common": "^8.0.0 || ^9.0.0"
