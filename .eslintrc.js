@@ -1,13 +1,11 @@
 // eslint-disable-next-line @typescript-eslint/no-var-requires
-const prettierRc = require("./.prettierrc");
-// eslint-disable-next-line @typescript-eslint/no-var-requires
 const path = require("path");
 module.exports = {
   env: {
     node: true,
     jest: true,
   },
-  extends: ["plugin:@typescript-eslint/recommended", "plugin:prettier/recommended"],
+  extends: ["plugin:@typescript-eslint/recommended", "prettier"],
   parser: "@typescript-eslint/parser",
   parserOptions: {
     sourceType: "module",
@@ -15,7 +13,6 @@ module.exports = {
   },
   plugins: ["@typescript-eslint"],
   rules: {
-    "prettier/prettier": ["error", prettierRc],
     "no-unused-vars": "off",
     "@typescript-eslint/ban-types": "off",
     "@typescript-eslint/no-unused-vars": "error",
