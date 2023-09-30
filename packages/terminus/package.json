@@ -31,7 +31,7 @@
     "@nestjs/platform-express": "^10.2.5",
     "@nestjs/terminus": "^10.1.1",
     "@nestjs/testing": "^10.2.5",
-    "@types/supertest": "^2.0.12",
+    "@types/supertest": "^2.0.13",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.8.1",
     "supertest": "^6.3.3"
