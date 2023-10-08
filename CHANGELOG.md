@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.6.60 (2023-10-08)
+
+**Note:** Version bump only for package @anchan828/nest-sendgrid-packages
+
 ## 0.6.59 (2023-10-01)
 
 **Note:** Version bump only for package @anchan828/nest-sendgrid-packages
