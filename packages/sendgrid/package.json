@@ -1,6 +1,6 @@
 {
   "name": "@anchan828/nest-sendgrid",
-  "version": "0.6.68",
+  "version": "0.6.69",
   "description": "SendGrid module for Nest framework (node.js)",
   "homepage": "https://github.com/anchan828/nest-sendgrid/tree/master/packages/sendgrid#readme",
   "bugs": {
