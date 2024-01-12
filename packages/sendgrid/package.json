@@ -25,7 +25,7 @@
     "watch": "tsc --watch"
   },
   "dependencies": {
-    "@sendgrid/mail": "^7.7.0",
+    "@sendgrid/mail": "^8.0.0",
     "deepmerge": "^4.3.1",
     "reflect-metadata": "^0.2.0"
   },
