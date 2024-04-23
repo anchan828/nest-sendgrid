@@ -29,7 +29,7 @@
     "test": "turbo run test"
   },
   "devDependencies": {
-    "@commitlint/cli": "19.2.2",
+    "@commitlint/cli": "19.3.0",
     "@commitlint/config-conventional": "19.2.2",
     "@lerna-lite/cli": "3.3.3",
     "@lerna-lite/publish": "3.3.3",
