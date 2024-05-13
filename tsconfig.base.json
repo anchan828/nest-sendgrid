@@ -6,12 +6,12 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "target": "es2021",
-    "sourceMap": true,
+    "sourceMap": false,
     "strict": true,
     "outDir": "./dist",
     "baseUrl": "./",
     "skipLibCheck": true,
-    "incremental": true
+    "incremental": false,
   },
-  "exclude": ["node_modules", "dist", "scripts"]
+  "exclude": ["node_modules", "dist", "scripts"],
 }
