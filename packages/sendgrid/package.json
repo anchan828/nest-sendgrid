@@ -39,5 +39,5 @@
   "peerDependencies": {
     "@nestjs/common": "^8.0.0 || ^9.0.0 || ^10.0.0"
   },
-  "packageManager": "npm@10.7.0"
+  "packageManager": "npm@10.8.1"
 }
