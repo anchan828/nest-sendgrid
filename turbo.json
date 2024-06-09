@@ -1,8 +1,8 @@
 {
   "$schema": "https://turborepo.org/schema.json",
-  "pipeline": {
+  "tasks": {
     "build": {
-      "dependsOn": ["^build"],
+      "dependsOn": ["^build", "^copy:license"],
       "outputs": ["dist/**"]
     },
     "lint": {
@@ -14,9 +14,11 @@
     "watch": {
       "outputs": []
     },
+    "copy:license": {
+      "outputs": []
+    },
     "test": {
-      "dependsOn": ["^build"],
-      "outputs": ["coverage/**"]
+      "dependsOn": ["^build"]
     }
   }
 }
