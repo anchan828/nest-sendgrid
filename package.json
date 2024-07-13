@@ -31,8 +31,8 @@
   "devDependencies": {
     "@commitlint/cli": "19.3.0",
     "@commitlint/config-conventional": "19.2.2",
-    "@lerna-lite/cli": "3.7.0",
-    "@lerna-lite/publish": "3.7.0",
+    "@lerna-lite/cli": "3.7.1",
+    "@lerna-lite/publish": "3.7.1",
     "@types/jest": "29.5.12",
     "@types/node": "20.14.10",
     "@typescript-eslint/eslint-plugin": "7.16.0",
