@@ -34,7 +34,7 @@
     "@lerna-lite/cli": "3.7.1",
     "@lerna-lite/publish": "3.7.1",
     "@types/jest": "29.5.12",
-    "@types/node": "20.14.13",
+    "@types/node": "20.14.14",
     "@typescript-eslint/eslint-plugin": "7.18.0",
     "@typescript-eslint/parser": "7.18.0",
     "eslint": "8.57.0",
