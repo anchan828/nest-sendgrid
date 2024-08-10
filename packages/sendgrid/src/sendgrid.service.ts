@@ -1,9 +1,11 @@
 import { Inject, Injectable } from "@nestjs/common";
-import { ClientResponse, MailDataRequired, MailService, ResponseError } from "@sendgrid/mail";
+import { MailDataRequired, MailService, ResponseError } from "@sendgrid/mail";
 import * as deepmerge from "deepmerge";
 import { SendGridConstants } from "./sendgrid.constants";
 import { SendGridModuleOptions } from "./sendgrid.interfaces";
 import { logger } from "./sendgrid.logger";
+
+type Response = Awaited<ReturnType<MailService["send"]>>;
 
 @Injectable()
 export class SendGridService {
@@ -29,8 +31,8 @@ export class SendGridService {
   public async send(
     data: Partial<MailDataRequired> | Partial<MailDataRequired>[],
     isMultiple?: boolean,
-    cb?: (err: Error | ResponseError, result: [ClientResponse, {}]) => void,
-  ): Promise<[ClientResponse, {}]> {
+    cb?: (err: Error | ResponseError, result: Response) => void,
+  ): Promise<Response> {
     if (Array.isArray(data)) {
       return this.mailService.send(
         data.map((d) => this.mergeWithDefaultMailData(d)) as MailDataRequired[],
@@ -44,8 +46,8 @@ export class SendGridService {
 
   public async sendMultiple(
     data: Partial<MailDataRequired>,
-    cb?: (error: Error | ResponseError, result: [ClientResponse, {}]) => void,
-  ): Promise<[ClientResponse, {}]> {
+    cb?: (error: Error | ResponseError, result: Response) => void,
+  ): Promise<Response> {
     return this.mailService.sendMultiple(this.mergeWithDefaultMailData(data) as MailDataRequired, cb);
   }
 
