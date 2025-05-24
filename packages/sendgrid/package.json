@@ -39,7 +39,7 @@
   "peerDependencies": {
     "@nestjs/common": "^8.0.0 || ^9.0.0 || ^10.0.0 || ^11.0.0"
   },
-  "packageManager": "npm@11.4.0",
+  "packageManager": "npm@11.4.1",
   "exports": {
     ".": {
       "import": {
