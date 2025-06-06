@@ -29,7 +29,7 @@
     "@nestjs/common": "11.0.5",
     "@nestjs/core": "11.0.5",
     "@nestjs/platform-express": "11.0.5",
-    "@nestjs/terminus": "10.3.0",
+    "@nestjs/terminus": "11.0.0",
     "@nestjs/testing": "11.1.2",
     "@types/supertest": "6.0.3",
     "reflect-metadata": "0.2.2",
@@ -37,7 +37,7 @@
     "supertest": "7.1.1"
   },
   "peerDependencies": {
-    "@nestjs/common": "^8.0.0 || ^9.0.0 || ^10.0.0 || ^11.0.0"
+    "@nestjs/common": "^10.0.0 || ^11.0.0"
   },
   "packageManager": "npm@11.4.1",
   "exports": {
