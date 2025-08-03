@@ -1,6 +1,6 @@
 {
   "name": "@anchan828/nest-sendgrid-terminus",
-  "version": "0.9.7",
+  "version": "0.9.8",
   "description": "A terminus of @sendgrid/mail module for Nest framework (node.js)",
   "homepage": "https://github.com/anchan828/nest-sendgrid/tree/master/packages/terminus#readme",
   "bugs": {
