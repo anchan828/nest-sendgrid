@@ -44,7 +44,7 @@
     "prettier": "3.6.2",
     "ts-jest": "29.4.4",
     "ts-node": "10.9.2",
-    "turbo": "2.5.7",
+    "turbo": "2.5.8",
     "typescript": "5.9.2",
     "typescript-eslint": "^8.8.1"
   },
